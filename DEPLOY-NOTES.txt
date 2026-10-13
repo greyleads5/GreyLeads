@@ -1,0 +1,46 @@
+GreyLeads website – ready for Cloudflare Pages
+==============================================
+
+DEPLOY (no coding needed)
+1. Unzip this file. You'll get a folder called "greyleads-site".
+2. Log in to Cloudflare -> Workers & Pages -> Create -> Pages -> "Upload assets" (Direct Upload).
+3. Name the project (e.g. greyleads), drag the "greyleads-site" folder in, and click Deploy.
+4. Your site is live at https://<project-name>.pages.dev
+5. Custom domain: open the project -> "Custom domains" -> "Set up a custom domain" -> greyleads.in
+   (add www.greyleads.in too). If greyleads.in already uses Cloudflare DNS, it connects automatically.
+
+TO UPDATE LATER
+Open the project -> "Create deployment" -> upload the new folder.
+
+WHAT'S INSIDE
+index.html (home), work, about, team, careers, process, blog, contact, automation,
+7 service pages, 404.html, sitemap.xml, robots.txt, favicon.svg,
+_headers (long caching for images and videos), assets/ (logos, photos, screenshots, videos).
+Clean URLs work automatically on Cloudflare Pages: /about serves about.html.
+
+BEFORE YOU GO LIVE
+- Forms: the "Send my request" forms (homepage + Contact page) send to greyleads5@gmail.com via FormSubmit.
+  IMPORTANT: the very first time someone submits the form, FormSubmit emails greyleads5@gmail.com an
+  activation link. Click it once; after that every submission arrives as an email.
+  Careers and newsletter forms are still design-only.
+- Replace sample content: the 2 "Coming soon" case studies,
+  service-page featured results, open roles and the extra blog posts.
+- Blog cards and job "Apply" buttons don't open full posts or job pages yet.
+
+SEO – AFTER GOING LIVE (priority: Bangalore, then Chennai)
+Already built in: city-focused titles, descriptions and keywords on every page, Google structured data
+(local business, services, breadcrumbs, FAQs), share image for WhatsApp/LinkedIn, sitemap.xml, robots.txt,
+hreflang en-IN, geo tags and security headers. To activate it:
+1. Domain: connect greyleads.in in Cloudflare Pages and redirect www.greyleads.in -> greyleads.in
+   (Cloudflare: Rules -> Redirect Rules). All tags assume https://greyleads.in.
+2. Google Search Console (search.google.com/search-console): add greyleads.in as a Domain property,
+   verify via Cloudflare DNS, then Sitemaps -> submit "sitemap.xml". Use "URL inspection" to request
+   indexing for the homepage and service pages.
+3. Google Business Profile (business.google.com): the biggest factor for "near me" and Bangalore map results.
+   Use the exact same name, address and phone as the website: GreyLeads, RMZ Ecoworld, 6A, Outer Ring Rd,
+   Bellandur, Bengaluru 560103, +91 70105 52833. Category "Internet marketing service", add photos,
+   services and ask happy clients for Google reviews.
+4. Bing Webmaster Tools (bing.com/webmasters): import from Search Console in one click.
+5. Test: search.google.com/test/rich-results and metatags.io (share preview).
+6. Chennai: Google Business Profile only allows a real staffed address. Once you have a Chennai office,
+   add a second profile and a dedicated Chennai landing page.
