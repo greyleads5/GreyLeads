@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSTJKSS88D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YSTJKSS88D');</script>
 <title>Our Work &amp; Case Studies | GreyLeads, Bangalore</title>
 <meta name="description" content="Case studies and creative work from GreyLeads, a Bangalore digital marketing agency: websites, SEO, ads and lead generation results for real brands.">
 <link rel="canonical" href="https://greyleads.in/work">
@@ -680,5 +683,9 @@ function filt(t){var n=0;chips.forEach(function(c){c.setAttribute('aria-pressed'
 chips.forEach(function(c){c.addEventListener('click',function(){filt(c.getAttribute('data-filter'))})});
 var cl=document.querySelector('.gl-wclear');if(cl)cl.addEventListener('click',function(){filt('all')});
 })();</script>
+<script>/* GA lead tracking */(function(){if(typeof gtag!=='function')return;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',ev=null;
+if(h.indexOf('tel:')===0)ev='phone_click';else if(h.indexOf('https://wa.me/')===0)ev='whatsapp_click';else if(h.indexOf('mailto:')===0)ev='email_click';
+if(ev)gtag('event',ev,{link_url:h,page_path:location.pathname,transport_type:'beacon'})},true);})();</script>
 </body>
 </html>
