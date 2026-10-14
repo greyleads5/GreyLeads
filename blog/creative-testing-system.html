@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSTJKSS88D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YSTJKSS88D');</script>
 <meta name="theme-color" content="#6D2EC7">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <title>Our Ad Creative Testing System, Explained | GreyLeads</title>
@@ -324,5 +327,9 @@ Chat with us
 </div>
 
 </div>
+<script>/* GA lead tracking */(function(){if(typeof gtag!=='function')return;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',ev=null;
+if(h.indexOf('tel:')===0)ev='phone_click';else if(h.indexOf('https://wa.me/')===0)ev='whatsapp_click';else if(h.indexOf('mailto:')===0)ev='email_click';
+if(ev)gtag('event',ev,{link_url:h,page_path:location.pathname,transport_type:'beacon'})},true);})();</script>
 </body>
 </html>

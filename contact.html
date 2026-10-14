@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSTJKSS88D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YSTJKSS88D');</script>
 <title>Contact GreyLeads – Digital Marketing Agency in Bangalore</title>
 <meta name="description" content="Talk to GreyLeads at RMZ Ecoworld, Bellandur, Bangalore. Call +91 70105 52833 or email contact@greyleads.in for a free growth plan. Serving Chennai too.">
 <link rel="canonical" href="https://greyleads.in/contact">
@@ -324,8 +327,12 @@ var t=b.innerHTML;b.disabled=true;b.style.opacity='.7';b.innerHTML='Sending…';
 function done(){b.innerHTML=t;b.disabled=false;b.style.opacity='';}
 fetch(EP,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)}).then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,j:j};});})
 .then(function(x){done();var ok=x.ok&&(x.j.success===true||x.j.success==='true');var m=String(x.j.message||'');
- if(ok){f.reset();msg('#15803D','Thanks! Your request is in. A senior strategist will reply within 24 hours.');}
+ if(ok){f.reset();if(window.gtag)gtag('event','generate_lead',{form_id:'contact-form',page_path:location.pathname,transport_type:'beacon'});msg('#15803D','Thanks! Your request is in. A senior strategist will reply within 24 hours.');}
  else if(/activat/i.test(m)){msg('#B45309','Almost ready: this form needs a one-time activation. Please check the greyleads5@gmail.com inbox (and Spam) for the “Activate Form” email from FormSubmit, click it, then send again.');}
  else{msg('#B91C1C','Something went wrong. Please try again, or email <a href="mailto:contact@greyleads.in">contact@greyleads.in</a>.');}})
-.catch(function(){done();f.submit();});});})();</script></body>
+.catch(function(){done();if(window.gtag)gtag('event','generate_lead',{form_id:'contact-form',page_path:location.pathname,transport_type:'beacon'});f.submit();});});})();</script><script>/* GA lead tracking */(function(){if(typeof gtag!=='function')return;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',ev=null;
+if(h.indexOf('tel:')===0)ev='phone_click';else if(h.indexOf('https://wa.me/')===0)ev='whatsapp_click';else if(h.indexOf('mailto:')===0)ev='email_click';
+if(ev)gtag('event',ev,{link_url:h,page_path:location.pathname,transport_type:'beacon'})},true);})();</script>
+</body>
 </html>

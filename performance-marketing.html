@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSTJKSS88D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YSTJKSS88D');</script>
 <title>Performance Marketing Agency in Bangalore | GreyLeads</title>
 <meta name="description" content="Performance marketing agency in Bangalore managing Google Ads, Meta, YouTube and LinkedIn campaigns for lower cost per lead and higher ROAS. Serving Chennai too.">
 <link rel="canonical" href="https://greyleads.in/performance-marketing">
@@ -460,5 +463,9 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){var x=e.targ
 (function(){var r=[].slice.call(document.querySelectorAll('.gl-rw'));if(!r.length)return;if(!('IntersectionObserver' in window)){r.forEach(function(e){e.classList.add('gl-in')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('gl-in');io.unobserve(e.target)}})},{threshold:0.6});r.forEach(function(e){io.observe(e)})})();
 </script>
+<script>/* GA lead tracking */(function(){if(typeof gtag!=='function')return;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',ev=null;
+if(h.indexOf('tel:')===0)ev='phone_click';else if(h.indexOf('https://wa.me/')===0)ev='whatsapp_click';else if(h.indexOf('mailto:')===0)ev='email_click';
+if(ev)gtag('event',ev,{link_url:h,page_path:location.pathname,transport_type:'beacon'})},true);})();</script>
 </body>
 </html>
