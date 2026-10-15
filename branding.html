@@ -334,8 +334,8 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-lv-cur{position:absolute;width:18px;height:18px;z-index:2;animation:glLvCur 7s cubic-bezier(.5,0,.3,1) infinite}
 @keyframes glLvCur{0%,30%{left:80%;top:90%;opacity:0}36%{opacity:1}54%{left:22%;top:66%}58%{left:22%;top:67%}80%{opacity:1}90%,100%{left:22%;top:66%;opacity:0}}
 /* apps: phone */
-.gl-lv-card.ph{left:27%;right:27%;padding:10px;border-radius:38px;background:#120B24;border-color:#2A2140}
-.gl-lv-scr{border-radius:30px;background:linear-gradient(170deg,#F4EEFF,#FFF4EC);padding:30px 14px 16px;display:flex;flex-direction:column;gap:9px;position:relative;overflow:hidden;min-height:350px}
+.gl-lv-card.ph{left:50%;right:auto;width:220px;margin-left:-110px;padding:10px;border-radius:38px;background:#120B24;border-color:#2A2140;box-sizing:border-box}
+.gl-lv-scr{border-radius:30px;background:linear-gradient(170deg,#F4EEFF,#FFF4EC);padding:30px 14px 16px;display:flex;flex-direction:column;gap:9px;position:relative;overflow:hidden;aspect-ratio:9/18.5;box-sizing:border-box}
 .gl-lv-scr::before{content:'';position:absolute;top:9px;left:50%;width:64px;height:16px;margin-left:-32px;border-radius:99px;background:#120B24}
 .gl-lv-scr h4{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:20px;letter-spacing:-.03em;color:#120B24}
 .gl-lv-row{display:flex;align-items:center;gap:9px;background:#fff;border-radius:14px;padding:9px;box-shadow:0 6px 14px rgba(76,29,149,.08);animation:glLvRow 6s cubic-bezier(.2,.7,.2,1) infinite;animation-delay:var(--d)}
@@ -393,6 +393,7 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-lv-step span{flex:1;font-size:13px;font-weight:600;color:#120B24;line-height:1.2}.gl-lv-step span small{display:block;font-weight:400;color:#6E6585;font-size:11.5px}
 .gl-lv-step u{text-decoration:none;font-family:'Geist Mono',monospace;font-size:11px;color:#6E6585}
 @keyframes glLvLit{0%,100%{box-shadow:none;border-color:rgba(18,11,36,.07)}8%,22%{box-shadow:0 12px 26px rgba(109,46,199,.18);border-color:#C9B3FF}}
+@media (max-width: 720px){.gl-lv .gl-lv-card.ph{left:50%;right:auto}}
 /* performance: budget */
 .gl-lv-ch{display:flex;flex-direction:column;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid rgba(18,11,36,.08)}
 .gl-lv-ch div{display:grid;grid-template-columns:80px 1fr;align-items:center;gap:12px;font-size:13px;color:#4A4360}
