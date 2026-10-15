@@ -193,7 +193,7 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-mmarq{padding:13px 0 !important}
 .gl-mmarq .gl-marq,.gl-mmarq .gl-marq>span{gap:22px !important}
 .gl-mmarq .gl-marq>span{font-size:21px !important}
-.gl-mmarq .gl-marq>span>span{width:7px !important;height:7px !important}
+.gl-mmarq .gl-marq>span>span[aria-hidden]{width:7px !important;height:7px !important}
 /* swipe rows */
 .gl-mswipe{display:flex !important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:12px !important;margin-left:-20px !important;margin-right:-20px !important;padding:12px 20px 6px !important;scroll-padding-left:20px;scrollbar-width:none;margin-top:28px !important;align-items:stretch !important;flex:1 1 100%;min-width:calc(100% + 40px) !important;box-sizing:border-box}
 .gl-mswipe::-webkit-scrollbar{display:none}
@@ -243,8 +243,8 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-mhl2>h1{order:2}
 .gl-mhl2>h1~*{order:4}
 .gl-mhl2>h1+p{font-size:16px !important;line-height:1.55 !important;margin-top:22px !important}
-.gl-mhl2>h1~div:last-child{margin-top:22px !important;flex-wrap:nowrap !important;gap:10px !important}
-.gl-mhl2>h1~div:last-child>a{flex:1 1 0;justify-content:center;padding:15px 12px !important;font-size:15px !important;white-space:nowrap}
+.gl-mhl2>h1~div:last-child{margin-top:22px !important;flex-wrap:wrap !important;gap:10px !important}
+.gl-mhl2>h1~div:last-child>a{flex:1 1 auto;justify-content:center;text-align:center;padding:15px 18px !important;font-size:15px !important;white-space:nowrap}
 .gl-mhv{order:3;flex:0 0 auto !important;margin-top:24px !important;width:100%;zoom:.86}
 .gl-mhv[style*="height: 480px"]{height:480px !important;zoom:.72}
 .gl-mhv[style*="height: 500px"]{height:500px !important;zoom:.7}
@@ -256,6 +256,8 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-p3 .gl-p3t{gap:12px !important}
 .gl-p3 .gl-p3t h3,.gl-p3 .gl-p3t h2{font-size:32px !important}
 [style*="flex: 1.15 1 460px; min-height: 460px"]{zoom:.6}
+.gl-mhdrwrap+section{margin-top:20px !important}
+.gl-fchips{padding-top:6px !important;padding-bottom:8px !important}
 /* footer */
 .gl-mfoot{display:grid !important;grid-template-columns:1fr 1fr;gap:28px 16px !important;padding-top:56px !important}
 .gl-mfoot>:first-child{grid-column:1/-1}
