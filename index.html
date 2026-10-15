@@ -300,6 +300,12 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-mwork>a>div:last-child>div>span:last-child>span{font-size:12px !important;padding:4px 10px !important}
 .gl-mwork>a .gl-csa{flex-basis:40px !important;width:40px !important;height:40px !important}
 }
+
+@media (max-width: 720px){
+.gl-mcre{--sq:min(62vw,250px);--rl:min(72vw,292px);display:grid !important;grid-auto-flow:column;grid-template-rows:var(--sq) var(--sq);grid-template-columns:var(--rl);grid-auto-columns:var(--sq);gap:12px !important}
+.gl-mcre>*{max-width:none !important;width:auto !important;height:auto !important;flex:none !important}
+.gl-mcre>:first-child{grid-row:1 / 3 !important}
+}
 </style></head>
 <body>
 <div style="font-family: 'Geist', system-ui, sans-serif; color: #120B24; background: #FBF9FF; width: 100%; box-sizing: border-box; overflow: hidden">
@@ -1122,7 +1128,10 @@ fetch(EP,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',ev=null;
 if(h.indexOf('tel:')===0)ev='phone_click';else if(h.indexOf('https://wa.me/')===0)ev='whatsapp_click';else if(h.indexOf('mailto:')===0)ev='email_click';
 if(ev)gtag('event',ev,{link_url:h,page_path:location.pathname,transport_type:'beacon'})},true);})();</script>
-<script>/*gl-logotop*/document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href="/"]');if(!a||e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;if(location.pathname!=="/"&&location.pathname!=="/index.html")return;e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});if(location.hash)history.replaceState(null,"","/");});</script><script>/*gl-mob3*/(function(){var mq=matchMedia('(max-width: 720px)');document.querySelectorAll('.gl-mswipe').forEach(function(row){var n=row.children.length,d=document.createElement('div');d.className='gl-mdots';d.setAttribute('aria-hidden','true');for(var k=0;k<n;k++)d.appendChild(document.createElement('i'));row.after(d);var dots=d.children;function upd(){var c=row.children[0];if(!c)return;var w=c.getBoundingClientRect().width+12,i=Math.round(row.scrollLeft/w);if(row.scrollLeft+row.clientWidth>=row.scrollWidth-4)i=n-1;for(var k=0;k<n;k++)dots[k].className=k===i?'on':''}row.addEventListener('scroll',upd,{passive:true});upd();});})();</script><script>/*gl-hdr*/(function(){var h=document.querySelector('.gl-mhdr');if(!h)return;var mq=matchMedia('(max-width: 720px)'),last=scrollY,tick=false;
+<script>/*gl-logotop*/document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href="/"]');if(!a||e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;if(location.pathname!=="/"&&location.pathname!=="/index.html")return;e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});if(location.hash)history.replaceState(null,"","/");});</script><script>/*gl-mob3*/(function(){document.querySelectorAll('.gl-mswipe').forEach(function(row){var d=document.createElement('div');d.className='gl-mdots';d.setAttribute('aria-hidden','true');row.after(d);var stops=[];
+function build(){var xs=[];[].forEach.call(row.children,function(c){var x=c.offsetLeft;if(!xs.some(function(v){return Math.abs(v-x)<4}))xs.push(x)});xs.sort(function(a,b){return a-b});stops=xs;if(d.children.length!==xs.length){d.innerHTML='';xs.forEach(function(){d.appendChild(document.createElement('i'))})}upd()}
+function upd(){if(!stops.length)return;var base=stops[0],sl=row.scrollLeft,i=0,best=1e9;stops.forEach(function(x,k){var v=Math.abs(x-base-sl);if(v<best){best=v;i=k}});if(sl+row.clientWidth>=row.scrollWidth-4)i=stops.length-1;[].forEach.call(d.children,function(el,k){el.className=k===i?'on':''})}
+row.addEventListener('scroll',upd,{passive:true});addEventListener('resize',build);build();});})();</script><script>/*gl-hdr*/(function(){var h=document.querySelector('.gl-mhdr');if(!h)return;var mq=matchMedia('(max-width: 720px)'),last=scrollY,tick=false;
 function run(){tick=false;var y=Math.max(0,scrollY),nav=h.querySelector('.gl-mnav');if(!mq.matches){h.classList.remove('gl-hdr-up','gl-hdr-float');last=y;return}
 if(nav&&nav.open){last=y;return}
 if(y<60){h.classList.remove('gl-hdr-up');h.classList.remove('gl-hdr-float')}else if(y>last+6){h.classList.add('gl-hdr-up')}else if(y<last-6){h.classList.remove('gl-hdr-up');h.classList.add('gl-hdr-float')}
