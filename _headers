@@ -12,3 +12,6 @@
 
 /apple-touch-icon.png
   Cache-Control: public, max-age=604800
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
