@@ -264,102 +264,62 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-mfoot{display:grid !important;grid-template-columns:1fr 1fr;gap:28px 16px !important;padding-top:56px !important}
 .gl-mfoot>:first-child{grid-column:1/-1}
 }
-</style><style>/*gl-ph*/
-.gl-phx{background:#0B0618 !important;color:#fff;isolation:isolate;overflow:visible}
-.gl-ph-bg{position:absolute;inset:0;border-radius:inherit;overflow:hidden;z-index:0;pointer-events:none}
-.gl-ph-bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75;will-change:transform}
-.gl-ph-bg i:nth-child(1){width:720px;height:720px;left:-180px;top:-260px;background:radial-gradient(circle,#6D2EC7 0,rgba(109,46,199,0) 68%);animation:glAur1 18s ease-in-out infinite alternate}
-.gl-ph-bg i:nth-child(2){width:620px;height:620px;right:-140px;top:-120px;background:radial-gradient(circle,#C04FD8 0,rgba(192,79,216,0) 66%);opacity:.55;animation:glAur2 22s ease-in-out infinite alternate}
-.gl-ph-bg i:nth-child(3){width:640px;height:640px;left:30%;bottom:-420px;background:radial-gradient(circle,#FF7A59 0,rgba(255,122,89,0) 66%);opacity:.42;animation:glAur3 26s ease-in-out infinite alternate}
-.gl-ph-bg b{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 70% 45%,#000 0,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 70% 45%,#000 0,transparent 75%)}
-.gl-ph-bg u{position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,70%) var(--my,40%),rgba(201,179,255,.16),transparent 60%);transition:background .2s}
-@keyframes glAur1{to{transform:translate(160px,120px) scale(1.15)}}
-@keyframes glAur2{to{transform:translate(-140px,160px) scale(.9)}}
-@keyframes glAur3{to{transform:translate(-200px,-120px) scale(1.2)}}
-.gl-phx>section{position:relative;z-index:1}
-.gl-phx nav[aria-label="Breadcrumb"]{color:rgba(255,255,255,.5) !important}
-.gl-phx nav[aria-label="Breadcrumb"] span[style]{color:#fff !important}
-.gl-ph-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:56px;align-items:center;margin-top:56px}
-.gl-ph-copy{min-width:0}
-.gl-ph-eye{display:inline-flex;align-items:center;gap:10px;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px;padding:8px 14px}
-.gl-ph-eye span{width:7px;height:7px;border-radius:50%;background:#D4FF4F;box-shadow:0 0 0 0 rgba(212,255,79,.6);animation:glPing 2s ease-out infinite}
-@keyframes glPing{0%{box-shadow:0 0 0 0 rgba(212,255,79,.55)}80%,100%{box-shadow:0 0 0 10px rgba(212,255,79,0)}}
-.gl-ph-h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(50px,6.1vw,100px);line-height:.92;letter-spacing:-.05em;margin:28px 0 0;color:#fff;text-wrap:balance}
-.gl-ph-h1 em{display:block;font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-.02em;background:linear-gradient(90deg,#C9B3FF 0%,#FF9BC8 50%,#FFC38A 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:.06em .2em .14em .16em;margin:-.06em -.2em -.14em -.16em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.gl-ph-p{font-size:19px;line-height:1.6;color:rgba(255,255,255,.72);margin:28px 0 0;max-width:560px}
-.gl-ph-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-.gl-ph-cta a{text-decoration:none;font-weight:600;font-size:16px;padding:18px 28px;border-radius:999px;min-height:56px;box-sizing:border-box;display:inline-flex;align-items:center;gap:10px;transition:transform .25s,box-shadow .25s,background .25s}
-.gl-ph-cta a:first-child{background:#fff;color:#120B24;box-shadow:0 18px 40px rgba(109,46,199,.45)}
-.gl-ph-cta a:first-child:hover{transform:translateY(-2px);box-shadow:0 24px 50px rgba(109,46,199,.6);opacity:1}
-.gl-ph-cta a:last-child{color:#fff;border:1.5px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.gl-ph-cta a:last-child:hover{background:rgba(255,255,255,.12);opacity:1}
-.gl-ph-proof{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:14px;color:rgba(255,255,255,.62)}
-.gl-ph-proof span{display:inline-flex;align-items:center;gap:8px}
-.gl-ph-proof b{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;color:#fff;font-weight:700;letter-spacing:-.02em}
-/* visual */
-.gl-ph-vis{position:relative;min-height:520px;perspective:1200px}
-.gl-ph-glow{position:absolute;left:50%;top:50%;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,rgba(212,255,79,.22),rgba(109,46,199,.0) 65%);filter:blur(30px);animation:glBreath 6s ease-in-out infinite}
-@keyframes glBreath{50%{transform:scale(1.15);opacity:.7}}
-.gl-ph-card{position:absolute;left:6%;right:6%;top:50%;transform:translateY(-50%) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.7,.2,1);background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.16);border-radius:28px;padding:24px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 50px 100px rgba(5,2,15,.6),inset 0 1px 0 rgba(255,255,255,.18)}
-.gl-ph-top{display:flex;justify-content:space-between;align-items:center;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
-.gl-ph-live{display:inline-flex;align-items:center;gap:6px;color:#D4FF4F}
-.gl-ph-live i{width:6px;height:6px;border-radius:50%;background:#D4FF4F;animation:glPing 1.6s ease-out infinite}
-.gl-ph-big{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-top:18px}
-.gl-ph-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:64px;letter-spacing:-.05em;line-height:.9;color:#fff;font-variant-numeric:tabular-nums}
-.gl-ph-num small{font-size:.5em;color:#D4FF4F;margin-left:2px}
-.gl-ph-cap{font-size:13px;color:rgba(255,255,255,.62);margin-top:8px;line-height:1.35}
-.gl-ph-spark{width:46%;height:70px;flex:none}
-.gl-ph-spark path.l{fill:none;stroke:url(#glphg);stroke-width:3;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;animation:glDraw 2.4s .4s cubic-bezier(.4,.1,.2,1) forwards}
-.gl-ph-spark path.a{fill:url(#glpha);opacity:0;animation:glFade 1s 1.8s forwards}
-.gl-ph-spark circle{fill:#D4FF4F;opacity:0;animation:glFade .4s 2.6s forwards}
-@keyframes glDraw{to{stroke-dashoffset:0}}
-@keyframes glFade{to{opacity:1}}
-.gl-ph-fun{display:flex;flex-direction:column;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1)}
-.gl-ph-fun div{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:12px;font-size:13px;color:rgba(255,255,255,.66)}
-.gl-ph-fun s{display:block;height:12px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;text-decoration:none}
-.gl-ph-fun s::after{content:'';display:block;height:100%;width:var(--w);border-radius:99px;background:var(--c);transform-origin:left;transform:scaleX(0);animation:glBar 1.4s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:var(--d)}
-@keyframes glBar{to{transform:scaleX(1)}}
-.gl-ph-fun div:last-child{color:#fff;font-weight:600}
-.gl-ph-toast{position:absolute;display:flex;align-items:center;gap:10px;background:#fff;color:#120B24;border-radius:16px;padding:11px 14px;box-shadow:0 24px 50px rgba(5,2,15,.45);font-size:13px;line-height:1.25;opacity:0;animation:glToast 9s cubic-bezier(.2,.7,.2,1) infinite;z-index:3;white-space:nowrap}
-.gl-ph-toast strong{display:block;font-weight:600}
-.gl-ph-toast em{font-style:normal;color:#6E6585;font-size:12px}
-.gl-ph-toast i{flex:none;width:30px;height:30px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-style:normal;font-size:14px}
-.gl-ph-t1{top:0;right:-2%;animation-delay:.8s}
-.gl-ph-t2{top:44%;left:-10%;animation-delay:3.8s}
-.gl-ph-t3{bottom:10%;right:-6%;animation-delay:6.8s}
-@keyframes glToast{0%{opacity:0;transform:translateY(14px) scale(.96)}6%,30%{opacity:1;transform:none}36%,100%{opacity:0;transform:translateY(-8px) scale(.98)}}
-.gl-ph-chip{position:absolute;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#fff;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:glFloat 7s ease-in-out infinite;z-index:2}
-.gl-ph-chip i{width:8px;height:8px;border-radius:3px;background:var(--c)}
-.gl-ph-c1{left:0;top:9%}.gl-ph-c2{right:12%;bottom:0;animation-delay:-2s}.gl-ph-c3{left:10%;bottom:0;animation-delay:-4s}.gl-ph-c4{right:-6%;top:24%;animation-delay:-1s;display:none}
-@keyframes glFloat{50%{transform:translateY(-12px)}}
-.gl-ph-dark{background:rgba(20,10,46,.55) !important;border-color:rgba(255,255,255,.14) !important;box-shadow:0 10px 30px rgba(5,2,15,.3)}
-.gl-ph-dark .gl-navlinks,.gl-ph-dark .gl-navl{color:rgba(255,255,255,.82) !important}
-.gl-ph-dark nav>a:first-child>span>span:first-child{color:#A9A3BD !important}
-.gl-ph-dark nav>a:first-child>span>span:last-child{color:#fff !important}
-.gl-ph-dark .gl-navcta,.gl-ph-dark nav>a[href="/contact"]:last-child{background:#fff !important;color:#120B24 !important}
-.gl-ph-dark .gl-mnav summary{background:#fff !important}
-.gl-ph-dark .gl-mnav summary .gl-mi1,.gl-ph-dark .gl-mnav summary .gl-mi2,.gl-ph-dark .gl-mnav summary .gl-mi3{background:#120B24 !important}
-@media (max-width: 1024px){.gl-ph-grid{grid-template-columns:1fr;gap:40px}.gl-ph-vis{min-height:500px;max-width:560px;width:100%;margin:0 auto}}
-@media (max-width: 720px){
-.gl-ph-grid{display:flex;flex-direction:column;gap:0;margin-top:28px}
-.gl-ph-copy{display:contents}
-.gl-ph-eye{order:1;align-self:flex-start}
-.gl-ph-h1{order:2;font-size:clamp(42px,12vw,54px);margin-top:20px}
-.gl-ph-vis{order:3;min-height:430px;margin-top:8px;zoom:.86}
-.gl-ph-p{order:4;font-size:16px;margin-top:4px}
-.gl-ph-cta{order:5;margin-top:22px}
-.gl-ph-cta a{flex:1 1 auto;justify-content:center;padding:15px 18px;font-size:15px;white-space:nowrap}
-.gl-ph-proof{order:6;margin-top:26px;gap:8px 16px;font-size:13px}
-.gl-ph-t1{right:0}.gl-ph-t2{left:-2%;top:40%}.gl-ph-t3{right:0}
-.gl-ph-c1{left:0}.gl-ph-c2{right:4%}.gl-ph-c3{left:4%}.gl-ph-c4{display:none}
-}
-@media (prefers-reduced-motion: reduce){.gl-ph-bg i,.gl-ph-glow,.gl-ph-chip,.gl-ph-eye span,.gl-ph-live i{animation:none}.gl-ph-toast{animation:none;opacity:1}.gl-ph-t2,.gl-ph-t3{display:none}.gl-ph-spark path.l{stroke-dashoffset:0;animation:none}.gl-ph-spark path.a,.gl-ph-spark circle{opacity:1;animation:none}.gl-ph-fun s::after{transform:none;animation:none}}
+</style><style>/*gl-lv*/
+.gl-lv{position:relative;flex:1 1 440px;min-width:0;min-height:540px;margin:0;perspective:1200px}
+.gl-lv-ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px dashed rgba(109,46,199,.22);transform:translate(-50%,-50%)}
+.gl-lv-ring.r1{width:440px;height:440px;animation:glSpin 60s linear infinite}
+.gl-lv-ring.r2{width:600px;height:600px;border-style:solid;border-color:rgba(109,46,199,.08);animation:glSpin 90s linear infinite reverse}
+.gl-lv-ring b{position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#6D2EC7;box-shadow:0 0 0 6px rgba(109,46,199,.12)}
+.gl-lv-ring.r2 b{background:#FF7A59;box-shadow:0 0 0 6px rgba(255,122,89,.14)}
+@keyframes glSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.gl-lv-blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.7;animation:glBlob 12s ease-in-out infinite alternate}
+.gl-lv-blob.b1{width:260px;height:260px;left:2%;top:4%;background:#D9C8FF}
+.gl-lv-blob.b2{width:240px;height:240px;right:0;bottom:2%;background:#FFD3C4;animation-delay:-6s}
+@keyframes glBlob{to{transform:translate(30px,-24px) scale(1.12)}}
+.gl-lv-card{position:absolute;left:8%;right:8%;top:50%;transform:translateY(-50%) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s cubic-bezier(.2,.7,.2,1);background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);border-radius:28px;padding:24px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 40px 80px rgba(76,29,149,.16),0 2px 0 rgba(255,255,255,.9) inset;z-index:2}
+.gl-lv-top{display:flex;justify-content:space-between;align-items:center;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6E6585}
+.gl-lv-live{display:inline-flex;align-items:center;gap:6px;color:#16A34A;background:#E8FBEF;border-radius:99px;padding:4px 9px}
+.gl-lv-live i{width:6px;height:6px;border-radius:50%;background:#22C55E;animation:glLvPing 1.6s ease-out infinite}
+@keyframes glLvPing{0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}80%,100%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
+.gl-lv-big{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-top:16px}
+.gl-lv-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:64px;letter-spacing:-.05em;line-height:.9;color:#120B24;font-variant-numeric:tabular-nums}
+.gl-lv-num small{font-size:.5em;background:linear-gradient(90deg,#6D2EC7,#FF7A59);-webkit-background-clip:text;background-clip:text;color:transparent;margin-left:2px}
+.gl-lv-cap{font-size:13px;color:#6E6585;margin-top:8px;line-height:1.35}
+.gl-lv-spark{width:46%;height:72px;flex:none;overflow:visible}
+.gl-lv-spark path.l{fill:none;stroke:url(#gllvg);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;animation:glLvDraw 2.4s .4s cubic-bezier(.4,.1,.2,1) forwards}
+.gl-lv-spark path.a{fill:url(#gllva);opacity:0;animation:glLvFade 1s 1.8s forwards}
+.gl-lv-spark circle{fill:#FF7A59;stroke:#fff;stroke-width:3;opacity:0;animation:glLvFade .4s 2.6s forwards}
+@keyframes glLvDraw{to{stroke-dashoffset:0}}
+@keyframes glLvFade{to{opacity:1}}
+.gl-lv-fun{display:flex;flex-direction:column;gap:10px;margin-top:20px;padding-top:18px;border-top:1px solid rgba(18,11,36,.08)}
+.gl-lv-fun div{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:12px;font-size:13px;color:#4A4360}
+.gl-lv-fun s{position:relative;display:block;height:12px;border-radius:99px;background:#F1ECFA;overflow:hidden;text-decoration:none}
+.gl-lv-fun s::after{content:'';display:block;height:100%;width:var(--w);border-radius:99px;background:var(--c);transform-origin:left;transform:scaleX(0);animation:glLvBar 1.4s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:var(--d)}
+.gl-lv-fun s::before{content:'';position:absolute;top:0;bottom:0;width:40px;left:-40px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);z-index:1;animation:glLvShine 3.2s ease-in-out infinite;animation-delay:calc(var(--d) + 1.6s)}
+@keyframes glLvBar{to{transform:scaleX(1)}}
+@keyframes glLvShine{0%{left:-40px}60%,100%{left:100%}}
+.gl-lv-fun div:last-child{color:#120B24;font-weight:600}
+.gl-lv-toast{position:absolute;display:flex;align-items:center;gap:10px;background:#fff;color:#120B24;border-radius:16px;padding:11px 14px;box-shadow:0 22px 44px rgba(76,29,149,.18);font-size:13px;line-height:1.25;opacity:0;animation:glLvToast 9s cubic-bezier(.2,.7,.2,1) infinite;z-index:3;white-space:nowrap}
+.gl-lv-toast strong{display:block;font-weight:600}
+.gl-lv-toast em{font-style:normal;color:#6E6585;font-size:12px}
+.gl-lv-toast i{flex:none;width:30px;height:30px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-style:normal;font-size:14px}
+.gl-lv-t1{top:2%;right:0;animation-delay:.8s}
+.gl-lv-t2{top:44%;left:-4%;animation-delay:3.8s}
+.gl-lv-t3{bottom:9%;right:2%;animation-delay:6.8s}
+@keyframes glLvToast{0%{opacity:0;transform:translateY(14px) scale(.96)}6%,30%{opacity:1;transform:none}36%,100%{opacity:0;transform:translateY(-8px) scale(.98)}}
+.gl-lv-chip{position:absolute;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#120B24;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid rgba(18,11,36,.06);box-shadow:0 12px 28px rgba(76,29,149,.12);animation:glLvFloat 7s ease-in-out infinite;z-index:3}
+.gl-lv-chip i{width:8px;height:8px;border-radius:3px;background:var(--c)}
+.gl-lv-c1{left:2%;top:10%}.gl-lv-c2{right:14%;bottom:1%;animation-delay:-2s}.gl-lv-c3{left:10%;bottom:1%;animation-delay:-4s}
+@keyframes glLvFloat{50%{transform:translateY(-12px)}}
+.gl-lv-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:#6D2EC7;opacity:0;z-index:1;offset-path:var(--p);animation:glLvTravel 4s linear infinite}
+@keyframes glLvTravel{0%{offset-distance:0%;opacity:0}10%{opacity:.9}90%{opacity:.9}100%{offset-distance:100%;opacity:0}}
+@media (max-width: 720px){.gl-lv{min-height:470px}.gl-lv-ring.r1{width:320px;height:320px}.gl-lv-ring.r2{width:420px;height:420px}.gl-lv-card{left:3%;right:3%}.gl-lv-t2{left:0}.gl-lv-c1{left:0}}
+@media (prefers-reduced-motion: reduce){.gl-lv *{animation:none !important}.gl-lv-toast.gl-lv-t1{opacity:1}.gl-lv-spark path.l{stroke-dashoffset:0}.gl-lv-spark path.a,.gl-lv-spark circle{opacity:1}.gl-lv-fun s::after{transform:none}}
 </style></head>
 <body>
 <div style="font-family: 'Geist', system-ui, sans-serif; color: #120B24; background: #FBF9FF; width: 100%; box-sizing: border-box; overflow: hidden">
 
-<div class="gl-phx gl-mhdrwrap mesh-hero gl-grain" style="position: relative; border-radius: 0 0 48px 48px; padding-top: 14px">
-<div class="gl-ph-bg" aria-hidden="true"><i></i><i></i><i></i><b></b><u></u></div>
+<div class="gl-mhdrwrap mesh-hero gl-grain" style="position: relative; border-radius: 0 0 48px 48px; padding-top: 14px">
 <header class="gl-mhdr gl-glass" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(255,255,255,.66); position: sticky; top: 14px; z-index: 20; max-width: 1280px; margin: 14px auto 0; border-radius: 999px; box-sizing: border-box">
 <nav style="padding: 12px 14px 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
 <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 12px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 23px; letter-spacing: -0.03em">
@@ -378,34 +338,37 @@ h1,h2,h3{overflow-wrap:break-word}
 <nav aria-label="Breadcrumb" style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6E6585; display: flex; flex-wrap: wrap; gap: 10px">
 <a href="/" style="text-decoration: none">Home</a><span aria-hidden="true">/</span><a href="/" style="text-decoration: none">Capabilities</a><span aria-hidden="true">/</span><span style="color: #120B24">Lead generation</span>
 </nav>
-<div class="gl-ph-grid">
-<div class="gl-ph-copy">
-<div class="gl-ph-eye"><span></span>Grow · Lead generation</div>
-<h1 class="gl-ph-h1 gl-up">Leads your sales team <em>actually wants.</em></h1>
-<p class="gl-ph-p gl-up" style="animation-delay:.15s">We build lead engines for brands in Bangalore, Chennai and across India: the right offer, the right audience, a landing page that converts, and a follow-up system that turns interest into revenue.</p>
-<div class="gl-ph-cta"><a href="#start">Get a free lead audit <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#results">See results</a></div>
-<div class="gl-ph-proof"><span><b>24+</b> brands growing with us</span><span><b>150+</b> leads a month for IAcharya</span><span><b>6 mo</b> to Google page one</span></div>
-</div>
-<div class="gl-ph-vis gl-up" aria-hidden="true" style="animation-delay:.25s">
-<div class="gl-ph-glow"></div>
-<div class="gl-ph-card">
-<div class="gl-ph-top"><span>Lead engine · IAcharya</span><span class="gl-ph-live"><i></i>Live</span></div>
-<div class="gl-ph-big"><div><div class="gl-ph-num"><span data-count="150">150</span><small>+</small></div><div class="gl-ph-cap">qualified leads<br>every month</div></div>
-<svg class="gl-ph-spark" viewBox="0 0 200 70" preserveAspectRatio="none"><defs><linearGradient id="glphg" x1="0" x2="1"><stop offset="0" stop-color="#C9B3FF"/><stop offset="1" stop-color="#D4FF4F"/></linearGradient><linearGradient id="glpha" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#D4FF4F" stop-opacity=".28"/><stop offset="1" stop-color="#D4FF4F" stop-opacity="0"/></linearGradient></defs><path class="a" d="M2 62 C30 60 40 52 62 50 S96 40 116 34 S150 26 168 14 S192 8 198 6 L198 70 L2 70Z"/><path class="l" d="M2 62 C30 60 40 52 62 50 S96 40 116 34 S150 26 168 14 S192 8 198 6"/><circle cx="198" cy="6" r="4"/></svg></div>
-<div class="gl-ph-fun">
-<div>Visitors<s style="--w:100%;--c:rgba(255,255,255,.28);--d:.3s"></s></div>
-<div>Enquiries<s style="--w:72%;--c:rgba(201,179,255,.6);--d:.5s"></s></div>
-<div>Qualified<s style="--w:50%;--c:#8B5CF6;--d:.7s"></s></div>
-<div>Customers<s style="--w:32%;--c:#D4FF4F;--d:.9s"></s></div>
+<div class="gl-mhx" style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center; margin-top: 56px">
+<div class="gl-mhl2" style="flex: 999 1 600px; min-width: 0">
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #4A4360; border: 1px solid rgba(18,11,36,0.14); border-radius: 999px; padding: 8px 14px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #6D2EC7"></span>Grow · Lead generation</div>
+<h1 class="gl-up" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(50px, 7vw, 108px); line-height: 0.94; letter-spacing: -0.045em; margin: 32px 0 0">Leads your sales team <span class="gl-gt" style="font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em">actually wants.</span></h1>
+<p class="gl-up" style="font-size: 20px; line-height: 1.55; color: #4A4360; margin: 32px 0 0; max-width: 600px; animation-delay: .15s">We build lead engines for brands in Bangalore, Chennai and across India: the right offer, the right audience, a landing page that converts, and a follow-up system that turns interest into revenue.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px">
+<a href="#start" style="text-decoration: none; background: #6D2EC7; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 18px 28px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 10px">Get a free lead audit
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#results" style="text-decoration: none; border: 1.5px solid rgba(18,11,36,0.2); background: rgba(255,255,255,0.6); font-weight: 600; font-size: 16px; padding: 18px 28px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center">See results</a>
 </div>
 </div>
-<div class="gl-ph-toast gl-ph-t1"><i style="background:#6D2EC7">★</i><span><strong>New qualified lead</strong><em>Synced to CRM</em></span></div>
-<div class="gl-ph-toast gl-ph-t2"><i style="background:#22C55E">✓</i><span><strong>WhatsApp reply sent</strong><em>Within seconds</em></span></div>
-<div class="gl-ph-toast gl-ph-t3"><i style="background:#FF7A59">↗</i><span><strong>Page 1 on Google</strong><em>In six months</em></span></div>
-<span class="gl-ph-chip gl-ph-c1"><i style="--c:#7DB7FF"></i>Meta ads</span>
-<span class="gl-ph-chip gl-ph-c2"><i style="--c:#86EFAC"></i>Google Search</span>
-<span class="gl-ph-chip gl-ph-c3"><i style="--c:#FCD34D"></i>LinkedIn</span>
-<span class="gl-ph-chip gl-ph-c4"><i style="--c:#F9A8D4"></i>YouTube</span>
+<div class="gl-lv gl-mhv gl-up" aria-hidden="true" style="animation-delay:.25s">
+<span class="gl-lv-blob b1"></span><span class="gl-lv-blob b2"></span>
+<span class="gl-lv-ring r2"><b></b></span><span class="gl-lv-ring r1"><b></b></span>
+<div class="gl-lv-card">
+<div class="gl-lv-top"><span>Lead engine · IAcharya</span><span class="gl-lv-live"><i></i>Live</span></div>
+<div class="gl-lv-big"><div><div class="gl-lv-num"><span data-count="150">150</span><small>+</small></div><div class="gl-lv-cap">qualified leads<br>every month</div></div>
+<svg class="gl-lv-spark" viewBox="0 0 200 72" preserveAspectRatio="none"><defs><linearGradient id="gllvg" x1="0" x2="1"><stop offset="0" stop-color="#C9B3FF"/><stop offset=".55" stop-color="#6D2EC7"/><stop offset="1" stop-color="#FF7A59"/></linearGradient><linearGradient id="gllva" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#6D2EC7" stop-opacity=".18"/><stop offset="1" stop-color="#6D2EC7" stop-opacity="0"/></linearGradient></defs><path class="a" d="M2 64 C30 62 40 54 62 52 S96 42 116 36 S150 28 168 16 S192 10 198 8 L198 72 L2 72Z"/><path class="l" d="M2 64 C30 62 40 54 62 52 S96 42 116 36 S150 28 168 16 S192 10 198 8"/><circle cx="198" cy="8" r="5"/></svg></div>
+<div class="gl-lv-fun">
+<div>Visitors<s style="--w:100%;--c:#E4DAFB;--d:.3s"></s></div>
+<div>Enquiries<s style="--w:72%;--c:#C9B3FF;--d:.5s"></s></div>
+<div>Qualified<s style="--w:50%;--c:linear-gradient(90deg,#8B5CF6,#6D2EC7);--d:.7s"></s></div>
+<div>Customers<s style="--w:32%;--c:linear-gradient(90deg,#FF9B85,#FF7A59);--d:.9s"></s></div>
+</div>
+</div>
+<div class="gl-lv-toast gl-lv-t1"><i style="background:#6D2EC7">★</i><span><strong>New qualified lead</strong><em>Synced to CRM</em></span></div>
+<div class="gl-lv-toast gl-lv-t2"><i style="background:#22C55E">✓</i><span><strong>WhatsApp reply sent</strong><em>Within seconds</em></span></div>
+<div class="gl-lv-toast gl-lv-t3"><i style="background:#FF7A59">↗</i><span><strong>Page 1 on Google</strong><em>In six months</em></span></div>
+<span class="gl-lv-chip gl-lv-c1"><i style="--c:#3B82F6"></i>Meta ads</span>
+<span class="gl-lv-chip gl-lv-c2"><i style="--c:#22C55E"></i>Google Search</span>
+<span class="gl-lv-chip gl-lv-c3"><i style="--c:#F59E0B"></i>LinkedIn</span>
 </div>
 </div>
 </section>
@@ -683,8 +646,7 @@ if(nav&&nav.open){last=y;return}
 if(y<60){h.classList.remove('gl-hdr-up','gl-hdr-float')}else if(y>last+6){h.classList.add('gl-hdr-up')}else if(y<last-6){h.classList.remove('gl-hdr-up');h.classList.add('gl-hdr-float')}
 last=y}
 addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(run)}},{passive:true});
-document.addEventListener('click',function(e){var n=h.querySelector('.gl-mnav');if(!n||!n.open)return;if(!n.contains(e.target)||e.target.closest('.gl-mpanel a'))n.open=false;});})();</script><script>/*gl-ph*/(function(){var h=document.querySelector('.gl-phx');if(!h)return;var c=h.querySelector('.gl-ph-card'),rm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(hover: hover)').matches;
-if(fine&&!rm){h.addEventListener('pointermove',function(e){var r=h.getBoundingClientRect();h.style.setProperty('--mx',(e.clientX-r.left)+'px');h.style.setProperty('--my',(e.clientY-r.top)+'px');if(c){var v=c.getBoundingClientRect(),x=(e.clientX-(v.left+v.width/2))/v.width,y=(e.clientY-(v.top+v.height/2))/v.height;c.style.setProperty('--ry',(Math.max(-1,Math.min(1,x))*8)+'deg');c.style.setProperty('--rx',(Math.max(-1,Math.min(1,-y))*6)+'deg')}});h.addEventListener('pointerleave',function(){if(c){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')}})}
-var hd=document.querySelector('header');if(hd){var upd=function(){var r=h.getBoundingClientRect(),hb=hd.getBoundingClientRect();hd.classList.toggle('gl-ph-dark',r.bottom>hb.bottom+8)};addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd()}
-h.querySelectorAll('[data-count]').forEach(function(el){var to=+el.getAttribute('data-count');if(rm){el.textContent=to;return}var t0=null;function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1800);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)}setTimeout(function(){requestAnimationFrame(step)},500)})})();</script></body>
+document.addEventListener('click',function(e){var n=h.querySelector('.gl-mnav');if(!n||!n.open)return;if(!n.contains(e.target)||e.target.closest('.gl-mpanel a'))n.open=false;});})();</script><script>/*gl-lv*/(function(){var v=document.querySelector('.gl-lv');if(!v)return;var c=v.querySelector('.gl-lv-card'),rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(matchMedia('(hover: hover)').matches&&!rm&&c){var s=v.closest('section')||v;s.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-(r.left+r.width/2))/r.width,y=(e.clientY-(r.top+r.height/2))/r.height;c.style.setProperty('--ry',(Math.max(-1,Math.min(1,x))*8)+'deg');c.style.setProperty('--rx',(Math.max(-1,Math.min(1,-y))*6)+'deg')});s.addEventListener('pointerleave',function(){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')})}
+v.querySelectorAll('[data-count]').forEach(function(el){var to=+el.getAttribute('data-count');if(rm){el.textContent=to;return}var t0=null;function st(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1800);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(st)}el.textContent='0';setTimeout(function(){requestAnimationFrame(st)},500)})})();</script></body>
 </html>
