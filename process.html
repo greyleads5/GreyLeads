@@ -242,7 +242,9 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-p3 .gl-p3t h3,.gl-p3 .gl-p3t h2{font-size:32px !important}
 [style*="flex: 1.15 1 460px; min-height: 460px"]{zoom:.6}
 .gl-mhdrwrap+section{margin-top:20px !important}
-.gl-fchips{padding-top:6px !important;padding-bottom:8px !important}
+.gl-fchips{padding-top:10px !important;padding-bottom:22px !important;margin-bottom:-12px !important}
+.gl-fchips>a.gl-card,.gl-fchips>a.gl-card:hover{transform:none !important}
+.gl-wchips>*,.gl-wchips>*:hover{transform:none !important}
 /* footer */
 .gl-mfoot{display:grid !important;grid-template-columns:1fr 1fr;gap:28px 16px !important;padding-top:56px !important}
 .gl-mfoot>:first-child{grid-column:1/-1}
@@ -436,6 +438,7 @@ if(ev)gtag('event',ev,{link_url:h,page_path:location.pathname,transport_type:'be
 function build(){var xs=[];[].forEach.call(row.children,function(c){if(!c.offsetParent)return;var x=c.offsetLeft;if(!xs.some(function(v){return Math.abs(v-x)<4}))xs.push(x)});xs.sort(function(a,b){return a-b});stops=xs;if(d.children.length!==xs.length){d.innerHTML='';xs.forEach(function(){d.appendChild(document.createElement('i'))})}upd()}
 function upd(){if(!stops.length)return;var base=stops[0],sl=row.scrollLeft,i=0,best=1e9;stops.forEach(function(x,k){var v=Math.abs(x-base-sl);if(v<best){best=v;i=k}});if(sl+row.clientWidth>=row.scrollWidth-4)i=stops.length-1;[].forEach.call(d.children,function(el,k){el.className=k===i?'on':''})}
 row.addEventListener('scroll',upd,{passive:true});addEventListener('resize',build);build();});
+document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('.gl-fchip,.gl-wchip');if(!c||!matchMedia('(max-width: 720px)').matches)return;var r=c.parentElement;setTimeout(function(){r.scrollTo({left:c.offsetLeft-(r.clientWidth-c.offsetWidth)/2,behavior:'smooth'})},30)});
 var h=document.querySelector('.gl-mhdr');if(!h)return;var mq=matchMedia('(max-width: 720px)'),last=scrollY,tick=false;
 function run(){tick=false;var y=Math.max(0,scrollY),nav=h.querySelector('.gl-mnav');if(!mq.matches){h.classList.remove('gl-hdr-up','gl-hdr-float');last=y;return}
 if(nav&&nav.open){last=y;return}
