@@ -238,6 +238,26 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-mfounder>div:first-child img{object-position:50% 22% !important}
 .gl-mfounder>div:last-child>p{display:none !important}
 .gl-mfounder>div:last-child{gap:16px !important}
+/* hero: headline -> visual -> copy -> buttons */
+.gl-mhx{flex-direction:column !important;flex-wrap:nowrap !important;gap:0 !important;align-items:stretch !important}
+.gl-mhl2{display:contents !important}
+.gl-mhl2>*{order:1}
+.gl-mhl2>h1{order:2}
+.gl-mhl2>h1~*{order:4}
+.gl-mhl2>h1+p{font-size:16px !important;line-height:1.55 !important;margin-top:22px !important}
+.gl-mhl2>h1~div:last-child{margin-top:22px !important;flex-wrap:nowrap !important;gap:10px !important}
+.gl-mhl2>h1~div:last-child>a{flex:1 1 0;justify-content:center;padding:15px 12px !important;font-size:15px !important;white-space:nowrap}
+.gl-mhv{order:3;flex:0 0 auto !important;margin-top:24px !important;width:100%;zoom:.86}
+.gl-mhv[style*="height: 480px"]{height:480px !important;zoom:.72}
+.gl-mhv[style*="height: 500px"]{height:500px !important;zoom:.7}
+.gl-mhv[style*="height: 520px"]{height:520px !important;zoom:.68}
+/* case-study images: compact near-square like the homepage */
+.gl-mswipe>a.gl-card>div:first-child[style*="height: 420px"]{zoom:.58;border-radius:48px !important}
+.gl-p3 .gl-p3i>div{height:440px !important;zoom:.58}
+.gl-p3{padding:28px 0 !important;gap:18px !important}
+.gl-p3 .gl-p3t{gap:12px !important}
+.gl-p3 .gl-p3t h3,.gl-p3 .gl-p3t h2{font-size:32px !important}
+[style*="flex: 1.15 1 460px; min-height: 460px"]{zoom:.6}
 /* footer */
 .gl-mfoot{display:grid !important;grid-template-columns:1fr 1fr;gap:28px 16px !important;padding-top:56px !important}
 .gl-mfoot>:first-child{grid-column:1/-1}
@@ -265,8 +285,8 @@ h1,h2,h3{overflow-wrap:break-word}
 <nav aria-label="Breadcrumb" style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6E6585; display: flex; flex-wrap: wrap; gap: 10px">
 <a href="/" style="text-decoration: none">Home</a><span aria-hidden="true">/</span><a href="/" style="text-decoration: none">Capabilities</a><span aria-hidden="true">/</span><span style="color: #120B24">Automation</span>
 </nav>
-<div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center; margin-top: 56px">
-<div style="flex: 999 1 600px; min-width: 0">
+<div class="gl-mhx" style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center; margin-top: 56px">
+<div class="gl-mhl2" style="flex: 999 1 600px; min-width: 0">
 <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #4A4360; border: 1px solid rgba(18,11,36,0.14); border-radius: 999px; padding: 8px 14px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #6D2EC7"></span>Scale · Automation</div>
 <h1 class="gl-up" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(50px, 7vw, 108px); line-height: 0.94; letter-spacing: -0.045em; margin: 32px 0 0">Every lead, <span class="gl-gt" style="font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em">followed up in seconds.</span></h1>
 <p class="gl-up" style="font-size: 20px; line-height: 1.55; color: #4A4360; margin: 32px 0 0; max-width: 600px; animation-delay: .15s">For teams in Bangalore, Chennai and across India, we connect your website, ads and forms to a CRM, then automate WhatsApp, email and sales follow-ups, so no enquiry goes cold.</p>
@@ -276,7 +296,7 @@ h1,h2,h3{overflow-wrap:break-word}
 <a href="#results" style="text-decoration: none; border: 1.5px solid rgba(18,11,36,0.2); background: rgba(255,255,255,0.6); font-weight: 600; font-size: 16px; padding: 18px 28px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center">See results</a>
 </div>
 </div>
-<div aria-hidden="true" class="gl-up" style="flex: 1 1 420px; min-width: 0; position: relative; animation-delay: .25s">
+<div class="gl-mhv" aria-hidden="true" class="gl-up" style="flex: 1 1 420px; min-width: 0; position: relative; animation-delay: .25s">
 <div style="background: #141416; border: 1px solid #26262A; border-radius: 28px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 40px 90px rgba(0,0,0,0.5)">
 <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #9A93B0; margin-bottom: 4px"><span>LEAD FLOW · AUTOMATED</span><span style="display: inline-flex; align-items: center; gap: 8px; color: #F4F4F2"><span class="gl-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #D4FF4F"></span>LIVE</span></div>
 <div style="display: flex; align-items: center; gap: 14px; background: #1B1B1F; border: 1px solid #26262A; border-radius: 16px; padding: 14px 16px">

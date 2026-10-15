@@ -278,6 +278,26 @@ html.gl-rd-lock,html.gl-rd-lock body{overflow:hidden}
 .gl-mfounder>div:first-child img{object-position:50% 22% !important}
 .gl-mfounder>div:last-child>p{display:none !important}
 .gl-mfounder>div:last-child{gap:16px !important}
+/* hero: headline -> visual -> copy -> buttons */
+.gl-mhx{flex-direction:column !important;flex-wrap:nowrap !important;gap:0 !important;align-items:stretch !important}
+.gl-mhl2{display:contents !important}
+.gl-mhl2>*{order:1}
+.gl-mhl2>h1{order:2}
+.gl-mhl2>h1~*{order:4}
+.gl-mhl2>h1+p{font-size:16px !important;line-height:1.55 !important;margin-top:22px !important}
+.gl-mhl2>h1~div:last-child{margin-top:22px !important;flex-wrap:nowrap !important;gap:10px !important}
+.gl-mhl2>h1~div:last-child>a{flex:1 1 0;justify-content:center;padding:15px 12px !important;font-size:15px !important;white-space:nowrap}
+.gl-mhv{order:3;flex:0 0 auto !important;margin-top:24px !important;width:100%;zoom:.86}
+.gl-mhv[style*="height: 480px"]{height:480px !important;zoom:.72}
+.gl-mhv[style*="height: 500px"]{height:500px !important;zoom:.7}
+.gl-mhv[style*="height: 520px"]{height:520px !important;zoom:.68}
+/* case-study images: compact near-square like the homepage */
+.gl-mswipe>a.gl-card>div:first-child[style*="height: 420px"]{zoom:.58;border-radius:48px !important}
+.gl-p3 .gl-p3i>div{height:440px !important;zoom:.58}
+.gl-p3{padding:28px 0 !important;gap:18px !important}
+.gl-p3 .gl-p3t{gap:12px !important}
+.gl-p3 .gl-p3t h3,.gl-p3 .gl-p3t h2{font-size:32px !important}
+[style*="flex: 1.15 1 460px; min-height: 460px"]{zoom:.6}
 /* footer */
 .gl-mfoot{display:grid !important;grid-template-columns:1fr 1fr;gap:28px 16px !important;padding-top:56px !important}
 .gl-mfoot>:first-child{grid-column:1/-1}

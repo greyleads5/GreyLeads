@@ -222,6 +222,26 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-mfounder>div:first-child img{object-position:50% 22% !important}
 .gl-mfounder>div:last-child>p{display:none !important}
 .gl-mfounder>div:last-child{gap:16px !important}
+/* hero: headline -> visual -> copy -> buttons */
+.gl-mhx{flex-direction:column !important;flex-wrap:nowrap !important;gap:0 !important;align-items:stretch !important}
+.gl-mhl2{display:contents !important}
+.gl-mhl2>*{order:1}
+.gl-mhl2>h1{order:2}
+.gl-mhl2>h1~*{order:4}
+.gl-mhl2>h1+p{font-size:16px !important;line-height:1.55 !important;margin-top:22px !important}
+.gl-mhl2>h1~div:last-child{margin-top:22px !important;flex-wrap:nowrap !important;gap:10px !important}
+.gl-mhl2>h1~div:last-child>a{flex:1 1 0;justify-content:center;padding:15px 12px !important;font-size:15px !important;white-space:nowrap}
+.gl-mhv{order:3;flex:0 0 auto !important;margin-top:24px !important;width:100%;zoom:.86}
+.gl-mhv[style*="height: 480px"]{height:480px !important;zoom:.72}
+.gl-mhv[style*="height: 500px"]{height:500px !important;zoom:.7}
+.gl-mhv[style*="height: 520px"]{height:520px !important;zoom:.68}
+/* case-study images: compact near-square like the homepage */
+.gl-mswipe>a.gl-card>div:first-child[style*="height: 420px"]{zoom:.58;border-radius:48px !important}
+.gl-p3 .gl-p3i>div{height:440px !important;zoom:.58}
+.gl-p3{padding:28px 0 !important;gap:18px !important}
+.gl-p3 .gl-p3t{gap:12px !important}
+.gl-p3 .gl-p3t h3,.gl-p3 .gl-p3t h2{font-size:32px !important}
+[style*="flex: 1.15 1 460px; min-height: 460px"]{zoom:.6}
 /* footer */
 .gl-mfoot{display:grid !important;grid-template-columns:1fr 1fr;gap:28px 16px !important;padding-top:56px !important}
 .gl-mfoot>:first-child{grid-column:1/-1}
@@ -245,14 +265,14 @@ h1,h2,h3{overflow-wrap:break-word}
 </header>
 <section style="position: relative; max-width: 1320px; margin: 0 auto; padding: 64px 28px 112px">
 <nav aria-label="Breadcrumb" style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6E6585; display: flex; gap: 10px"><a href="/" style="text-decoration: none">Home</a><span aria-hidden="true">/</span><span style="color: #120B24">Contact</span></nav>
-<div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center; margin-top: 48px">
-<div style="flex: 999 1 600px; min-width: 0">
+<div class="gl-mhx" style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center; margin-top: 48px">
+<div class="gl-mhl2" style="flex: 999 1 600px; min-width: 0">
 <div class="gl-glass" style="display: inline-flex; align-items: center; gap: 10px; font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #4A4360; border-radius: 999px; padding: 8px 14px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #6D2EC7"></span>Replies within 24 hours</div>
 <h1 class="gl-up" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(50px, 7vw, 108px); line-height: 0.94; letter-spacing: -0.045em; margin: 32px 0 0">Let's talk about <span class="gl-gt" style="font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400">your growth.</span></h1>
 <p class="gl-up" style="font-size: 20px; line-height: 1.55; color: #4A4360; margin: 32px 0 0; max-width: 600px; animation-delay: .15s">Tell us what you're working on. A senior strategist, not a salesperson, will get back to you within one working day.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px"><a href="#contact" style="text-decoration: none; background: linear-gradient(90deg, #6D2EC7, #A43FD6); color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 18px 28px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 16px 36px rgba(109,46,199,0.3)">Send a message<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="https://wa.me/917010552833" class="gl-glass" style="text-decoration: none; color: #120B24; font-weight: 600; font-size: 16px; padding: 18px 28px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center">WhatsApp us</a></div>
 </div>
-<div aria-hidden="true" class="gl-up" style="flex: 1 1 400px; min-width: 0; position: relative; height: 500px; animation-delay: .25s">
+<div class="gl-mhv" aria-hidden="true" class="gl-up" style="flex: 1 1 400px; min-width: 0; position: relative; height: 500px; animation-delay: .25s">
 <div style="position: absolute; left: 10%; right: 6%; top: 20px; border-radius: 30px; overflow: hidden; box-shadow: 0 40px 90px rgba(60,20,120,0.22); background: #EFE7DD">
 <div style="background: #120B24; color: #FFFFFF; padding: 14px 18px; display: flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 536 536" role="img" aria-label="GreyLeads logo"><path fill="#8C8C8C" d="M270 45A235 235 0 1 0 505 280L295 280L295 352L413 352A160 160 0 1 1 270 120Z"></path><path fill="#6C2BC4" d="M295 45H357V196H505V258H295Z"></path><rect x="370" y="118" width="66" height="66" rx="3" fill="#7A45CF"></rect><rect x="392" y="52" width="52" height="50" rx="3" fill="#9466DB"></rect><rect x="450" y="108" width="52" height="52" rx="3" fill="#8A5AD6"></rect><rect x="470" y="57" width="36" height="36" rx="3" fill="#A47DE0"></rect><rect x="452" y="26" width="22" height="22" rx="2" fill="#A47DE0"></rect><rect x="486" y="18" width="16" height="16" rx="2" fill="#B497E8"></rect></svg></span><span><span style="display: block; font-weight: 600">GreyLeads</span><span style="font-size: 12px; color: #4ADE80">online</span></span></div>
 <div style="padding: 18px; display: flex; flex-direction: column; gap: 10px; min-height: 300px">

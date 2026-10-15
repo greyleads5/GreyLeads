@@ -234,6 +234,26 @@ h1,h2,h3{overflow-wrap:break-word}
 .gl-mfounder>div:first-child img{object-position:50% 22% !important}
 .gl-mfounder>div:last-child>p{display:none !important}
 .gl-mfounder>div:last-child{gap:16px !important}
+/* hero: headline -> visual -> copy -> buttons */
+.gl-mhx{flex-direction:column !important;flex-wrap:nowrap !important;gap:0 !important;align-items:stretch !important}
+.gl-mhl2{display:contents !important}
+.gl-mhl2>*{order:1}
+.gl-mhl2>h1{order:2}
+.gl-mhl2>h1~*{order:4}
+.gl-mhl2>h1+p{font-size:16px !important;line-height:1.55 !important;margin-top:22px !important}
+.gl-mhl2>h1~div:last-child{margin-top:22px !important;flex-wrap:nowrap !important;gap:10px !important}
+.gl-mhl2>h1~div:last-child>a{flex:1 1 0;justify-content:center;padding:15px 12px !important;font-size:15px !important;white-space:nowrap}
+.gl-mhv{order:3;flex:0 0 auto !important;margin-top:24px !important;width:100%;zoom:.86}
+.gl-mhv[style*="height: 480px"]{height:480px !important;zoom:.72}
+.gl-mhv[style*="height: 500px"]{height:500px !important;zoom:.7}
+.gl-mhv[style*="height: 520px"]{height:520px !important;zoom:.68}
+/* case-study images: compact near-square like the homepage */
+.gl-mswipe>a.gl-card>div:first-child[style*="height: 420px"]{zoom:.58;border-radius:48px !important}
+.gl-p3 .gl-p3i>div{height:440px !important;zoom:.58}
+.gl-p3{padding:28px 0 !important;gap:18px !important}
+.gl-p3 .gl-p3t{gap:12px !important}
+.gl-p3 .gl-p3t h3,.gl-p3 .gl-p3t h2{font-size:32px !important}
+[style*="flex: 1.15 1 460px; min-height: 460px"]{zoom:.6}
 /* footer */
 .gl-mfoot{display:grid !important;grid-template-columns:1fr 1fr;gap:28px 16px !important;padding-top:56px !important}
 .gl-mfoot>:first-child{grid-column:1/-1}
@@ -261,8 +281,8 @@ h1,h2,h3{overflow-wrap:break-word}
 <nav aria-label="Breadcrumb" style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6E6585; display: flex; flex-wrap: wrap; gap: 10px">
 <a href="/" style="text-decoration: none">Home</a><span aria-hidden="true">/</span><a href="/" style="text-decoration: none">Capabilities</a><span aria-hidden="true">/</span><span style="color: #120B24">Creative ads & design</span>
 </nav>
-<div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center; margin-top: 56px">
-<div style="flex: 999 1 600px; min-width: 0">
+<div class="gl-mhx" style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center; margin-top: 56px">
+<div class="gl-mhl2" style="flex: 999 1 600px; min-width: 0">
 <div style="display: inline-flex; align-items: center; gap: 10px; font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #4A4360; border: 1px solid rgba(18,11,36,0.14); border-radius: 999px; padding: 8px 14px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #6D2EC7"></span>Create · Creative ads</div>
 <h1 class="gl-up" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(50px, 7vw, 108px); line-height: 0.94; letter-spacing: -0.045em; margin: 32px 0 0">Ads people <span class="gl-gt" style="font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em">don't scroll past.</span></h1>
 <p class="gl-up" style="font-size: 20px; line-height: 1.55; color: #4A4360; margin: 32px 0 0; max-width: 600px; animation-delay: .15s">Great targeting can't save a boring ad. Our in-house Bangalore studio designs posts, videos and campaigns that stop the thumb, tell your story in seconds and make people act.</p>
@@ -272,7 +292,7 @@ h1,h2,h3{overflow-wrap:break-word}
 <a href="#results" style="text-decoration: none; border: 1.5px solid rgba(18,11,36,0.2); background: rgba(255,255,255,0.6); font-weight: 600; font-size: 16px; padding: 18px 28px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center">See results</a>
 </div>
 </div>
-<div aria-hidden="true" class="gl-up" style="flex: 1 1 440px; min-width: 0; position: relative; height: 500px; animation-delay: .25s">
+<div class="gl-mhv" aria-hidden="true" class="gl-up" style="flex: 1 1 440px; min-width: 0; position: relative; height: 500px; animation-delay: .25s">
 <div style="position: absolute; left: 0; top: 70px; transform: rotate(-9deg)"><div class="gl-float" style="width: 210px; height: 270px; border-radius: 22px; background: #1C1C20; border: 1px solid #34343A; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; animation-delay: -1.5s"><span style="align-self: flex-start; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #4A4360; border: 1px solid #34343A; border-radius: 999px; padding: 5px 9px">CONCEPT A</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px; line-height: 0.95; letter-spacing: -0.04em; color: #6E6585">New drop.<br>Same old ad?</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #6E6585">CTR ▾</span></div></div>
 <div style="position: absolute; left: 130px; top: 10px; transform: rotate(5deg)"><div class="gl-float" style="width: 210px; height: 270px; border-radius: 22px; background: #EEEEEC; color: #0C0C0D; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; animation-delay: -3s"><span style="align-self: flex-start; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #55555A; border: 1px solid #CFCFCB; border-radius: 999px; padding: 5px 9px">CONCEPT B</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px; line-height: 0.95; letter-spacing: -0.04em">Limited time.<br><span class="gl-gt" style="font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400">Big energy.</span></span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #55555A">CTR –</span></div></div>
 <div style="position: absolute; right: 0; top: 150px; transform: rotate(-3deg)"><div class="gl-float" style="width: 240px; height: 310px; border-radius: 24px; background: #6D2EC7; color: #FFFFFF; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 40px 80px rgba(60,20,120,0.22)"><span style="align-self: flex-start; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; background: rgba(255,255,255,0.16); border-radius: 999px; padding: 5px 9px">CONCEPT C</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 36px; line-height: 0.92; letter-spacing: -0.045em">Ads people<br>don't <span class="gl-gt" style="font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400">skip.</span></span><span style="display: flex; justify-content: space-between; align-items: center"><span class="gl-pulse" style="background: #D4FF4F; color: #0C0C0D; border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 600">★ Winner</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px">CTR ▲</span></span></div></div>
