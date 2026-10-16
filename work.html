@@ -329,7 +329,7 @@ html.gl-rd-lock,html.gl-rd-lock body{overflow:hidden}
 @keyframes glWkFloat{50%{transform:translateY(-10px)}}
 @media (max-width:720px){.gl-wk-chip{font-size:11.5px;padding:7px 11px}.gl-wk-chip.k1{left:-6px}.gl-wk-chip.k2{right:-4px}.gl-wk-ring.r2{display:none}}
 @media (prefers-reduced-motion:reduce){.gl-wk-blob,.gl-wk-ring,.gl-wk-chip{animation:none!important}}
-</style></head>
+</style><style id="gl-dhdr">@media (min-width:721px){.gl-mhdrwrap{padding-top:99px!important}.gl-mhdr{position:fixed!important;top:28px!important;left:0;right:0;margin:0 auto!important;max-width:1280px;z-index:60!important;transition:transform .4s cubic-bezier(.2,.7,.2,1),top .3s ease,left .3s ease,right .3s ease,box-shadow .3s ease;will-change:transform}.gl-mhdr.gl-hdr-float{top:14px!important;background:rgba(255,255,255,.9)!important;box-shadow:0 14px 34px rgba(60,20,120,.16)}.gl-mhdr.gl-hdr-up{transform:translateY(calc(-100% - 40px))}}@media (min-width:721px) and (max-width:1303px){.gl-mhdr.gl-hdr-float{left:12px;right:12px}}@media (prefers-reduced-motion:reduce){.gl-mhdr{transition:none!important}}</style></head>
 <body>
 <div style="font-family: 'Geist', system-ui, sans-serif; color: #120B24; background: #FBF9FF; width: 100%; box-sizing: border-box; overflow: hidden">
 
@@ -674,9 +674,9 @@ function build(){var xs=[];[].forEach.call(row.children,function(c){if(!c.offset
 function upd(){if(!stops.length)return;var base=stops[0],sl=row.scrollLeft,i=0,best=1e9;stops.forEach(function(x,k){var v=Math.abs(x-base-sl);if(v<best){best=v;i=k}});if(sl+row.clientWidth>=row.scrollWidth-4)i=stops.length-1;[].forEach.call(d.children,function(el,k){el.className=k===i?'on':''})}
 row.addEventListener('scroll',upd,{passive:true});addEventListener('resize',build);build();});
 document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('.gl-fchip,.gl-wchip');if(!c||!matchMedia('(max-width: 720px)').matches)return;var r=c.parentElement;setTimeout(function(){r.scrollTo({left:c.offsetLeft-(r.clientWidth-c.offsetWidth)/2,behavior:'smooth'})},30)});
-var h=document.querySelector('.gl-mhdr');if(!h)return;var mq=matchMedia('(max-width: 720px)'),last=scrollY,tick=false;
+var h=document.querySelector('.gl-mhdr');if(!h)return;var mq=matchMedia('all'),last=scrollY,tick=false;
 function run(){tick=false;var y=Math.max(0,scrollY),nav=h.querySelector('.gl-mnav');if(!mq.matches){h.classList.remove('gl-hdr-up','gl-hdr-float');last=y;return}
-if(nav&&nav.open){last=y;return}
+if((nav&&nav.open)||h.querySelector('.gl-dd:hover,.gl-dd:focus-within')){last=y;return}
 if(y<60){h.classList.remove('gl-hdr-up','gl-hdr-float')}else if(y>last+6){h.classList.add('gl-hdr-up')}else if(y<last-6){h.classList.remove('gl-hdr-up');h.classList.add('gl-hdr-float')}
 last=y}
 addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(run)}},{passive:true});
