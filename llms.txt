@@ -38,6 +38,7 @@
 - [Pix.city](https://greyleads.in/work/pixcity): local marketing, France. Targeted, 100% verified decision-maker data across France and Europe.
 - [Quadrate](https://greyleads.in/work/quadrate): translation services. Targeted, 100% verified data that gave the sales team better response.
 - [SOLIZE](https://greyleads.in/work/solize): digital engineering and manufacturing. LinkedIn ad campaigns and creative to reach engineering and industry professionals.
+- [Jona's Cafe](https://greyleads.in/work/jonas-cafe): cafe and food. Mobile app rebuilt from scratch for iOS and Android, with AI features, automation and a lightweight design, for launch on the Play Store and App Store.
 - [All work](https://greyleads.in/work)
 
 ## Company
