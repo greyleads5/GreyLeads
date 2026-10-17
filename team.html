@@ -253,7 +253,7 @@ h1,h2,h3{overflow-wrap:break-word}
 <body>
 <div style="font-family: 'Geist', system-ui, sans-serif; color: #120B24; background: #FBF9FF; width: 100%; box-sizing: border-box; overflow: hidden">
 
-<div class="gl-mhdrwrap mesh-hero gl-grain" style="position: relative; border-radius: 0 0 48px 48px; padding-top: 14px">
+<main style="display: contents"><div class="gl-mhdrwrap mesh-hero gl-grain" style="position: relative; border-radius: 0 0 48px 48px; padding-top: 14px">
 <header class="gl-mhdr gl-glass" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(255,255,255,.66); position: sticky; top: 14px; z-index: 20; max-width: 1280px; margin: 14px auto 0; border-radius: 999px; box-sizing: border-box">
 <nav style="padding: 12px 14px 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
 <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 12px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 23px; letter-spacing: -0.03em">
@@ -321,7 +321,7 @@ h1,h2,h3{overflow-wrap:break-word}
 <p style="font-size: 19px; line-height: 1.5; margin: 0">We're always looking for curious, talented people who care about results.</p>
 <a href="/careers" style="align-self: flex-start; text-decoration: none; background: #FFFFFF; color: #120B24; font-weight: 600; font-size: 17px; padding: 20px 32px; border-radius: 999px; min-height: 60px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 12px">See open roles<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div></div></section>
-<footer class="mesh-night" style="color: #F4F1FF; margin-top: 16px">
+</main><footer class="mesh-night" style="color: #F4F1FF; margin-top: 16px">
 <div class="gl-mfoot" style="max-width: 1320px; margin: 0 auto; padding: 88px 28px 0; display: flex; flex-wrap: wrap; gap: 48px">
 <div style="flex: 2 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
 <a href="/" style="text-decoration: none; display: inline-flex; align-items: center; gap: 12px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.03em"><svg width="40" height="40" viewBox="0 0 536 536" role="img" aria-label="GreyLeads logo"><path fill="#8C8C8C" d="M270 45A235 235 0 1 0 505 280L295 280L295 352L413 352A160 160 0 1 1 270 120Z"></path><path fill="#6C2BC4" d="M295 45H357V196H505V258H295Z"></path><rect x="370" y="118" width="66" height="66" rx="3" fill="#7A45CF"></rect><rect x="392" y="52" width="52" height="50" rx="3" fill="#9466DB"></rect><rect x="450" y="108" width="52" height="52" rx="3" fill="#8A5AD6"></rect><rect x="470" y="57" width="36" height="36" rx="3" fill="#A47DE0"></rect><rect x="452" y="26" width="22" height="22" rx="2" fill="#A47DE0"></rect><rect x="486" y="18" width="16" height="16" rx="2" fill="#B497E8"></rect></svg><span><span style="color: #8C8C8C">Grey</span><span style="color: #FFFFFF">Leads</span></span></a>
@@ -383,9 +383,9 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 if(h.indexOf('tel:')===0)ev='phone_click';else if(h.indexOf('https://wa.me/')===0)ev='whatsapp_click';else if(h.indexOf('mailto:')===0)ev='email_click';
 if(ev)gtag('event',ev,{link_url:h,page_path:location.pathname,transport_type:'beacon'})},true);})();</script>
 <script>/*gl-mall*/(function(){document.querySelectorAll('.gl-mswipe').forEach(function(row){var d=document.createElement('div');d.className='gl-mdots';d.setAttribute('aria-hidden','true');row.after(d);var stops=[];
-function build(){var xs=[];[].forEach.call(row.children,function(c){if(!c.offsetParent)return;var x=c.offsetLeft;if(!xs.some(function(v){return Math.abs(v-x)<4}))xs.push(x)});xs.sort(function(a,b){return a-b});stops=xs;if(d.children.length!==xs.length){d.innerHTML='';xs.forEach(function(){d.appendChild(document.createElement('i'))})}upd()}
+function build(){if(!matchMedia('(max-width: 720px)').matches)return;var xs=[];[].forEach.call(row.children,function(c){if(!c.offsetParent)return;var x=c.offsetLeft;if(!xs.some(function(v){return Math.abs(v-x)<4}))xs.push(x)});xs.sort(function(a,b){return a-b});stops=xs;if(d.children.length!==xs.length){d.innerHTML='';xs.forEach(function(){d.appendChild(document.createElement('i'))})}upd()}
 function upd(){if(!stops.length)return;var base=stops[0],sl=row.scrollLeft,i=0,best=1e9;stops.forEach(function(x,k){var v=Math.abs(x-base-sl);if(v<best){best=v;i=k}});if(sl+row.clientWidth>=row.scrollWidth-4)i=stops.length-1;[].forEach.call(d.children,function(el,k){el.className=k===i?'on':''})}
-row.addEventListener('scroll',upd,{passive:true});addEventListener('resize',build);build();});
+row.addEventListener('scroll',upd,{passive:true});addEventListener('resize',build);(window.requestIdleCallback||setTimeout)(build);});
 document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('.gl-fchip,.gl-wchip');if(!c||!matchMedia('(max-width: 720px)').matches)return;var r=c.parentElement;setTimeout(function(){r.scrollTo({left:c.offsetLeft-(r.clientWidth-c.offsetWidth)/2,behavior:'smooth'})},30)});
 var h=document.querySelector('.gl-mhdr');if(!h)return;var mq=matchMedia('all'),last=scrollY,tick=false;
 function run(){tick=false;var y=Math.max(0,scrollY),nav=h.querySelector('.gl-mnav');if(!mq.matches){h.classList.remove('gl-hdr-up','gl-hdr-float');last=y;return}
