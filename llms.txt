@@ -51,6 +51,7 @@
 
 ## Articles
 
+- [Google Ads channel prioritization: how to stop your Search budget leaking to Display](https://greyleads.in/blog/google-ads-channel-prioritization)
 - [Last-minute Diwali marketing strategy: what still works before 8 November](https://greyleads.in/blog/diwali-marketing-strategy)
 - [ChatGPT traffic dropped in GA4? How to track AI visitors properly](https://greyleads.in/blog/track-chatgpt-traffic-ga4)
 - [ChatGPT ads in India: what businesses should know before they spend](https://greyleads.in/blog/chatgpt-ads-india)

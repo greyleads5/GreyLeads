@@ -16,14 +16,16 @@ Rule: one post per draft PR, merged by the owner between 9:30 and 11:00 AM IST o
 | 2026-10-16 | chatgpt-ads-india | ChatGPT ads India | Live |
 | 2026-10-19 | track-chatgpt-traffic-ga4 | track ChatGPT traffic in GA4 | Live |
 | 2026-10-21 | diwali-marketing-strategy | Diwali marketing strategy | Live |
+| 2026-10-23 | google-ads-channel-prioritization | Google Ads channel prioritization | Ready to upload |
 
 ## Next two weeks (plan, re-check trends before each run)
 
 | Target date | Working title | Primary keyword | Angle | Why now |
 |---|---|---|---|---|
-| Fri 23 Oct 2026 | Dynamic Search Ads are moving to AI Max: what Indian advertisers should do now | AI Max Google Ads | Plain-English explainer, what changes for DSA campaigns, how to read AI Max search-term reporting, when to opt in early | Google's DSA-to-AI Max upgrade is under way and Think with Google's 2026 festive guide pushes AI Max (re-check the official timeline before writing; sources disagree) |
-| Mon 26 Oct 2026 | Google's new channel controls: how to stop Search budgets leaking to Display | Google Ads channel prioritization | Plain-English explainer of channel prioritization + budget allocation (launched 14 Oct) and what to set for lead-gen Search and PMax | New control rolled out globally on 14 Oct 2026; old Display spend setup retires Feb 2027 |
-| Wed 28 Oct 2026 | Google Business Profile checklist for Bangalore businesses before year-end | Google Business Profile optimisation Bangalore | Local SEO checklist: categories, reviews, photos, offers, Q&A | Festive and year-end local searches; evergreen local lead-gen topic for Bangalore/Chennai |
-| Fri 30 Oct 2026 | Digital marketing agency in Chennai: what to ask before you hire one | digital marketing agency Chennai | Buyer's checklist that supports the Chennai landing page | Chennai is the second SEO priority market |
+| Mon 26 Oct 2026 | Google Business Profile checklist for Bangalore businesses before year-end | Google Business Profile optimisation Bangalore | Local SEO checklist: categories, reviews, photos, offers, Q&A, tracking calls | Festive and year-end "near me" searches; evergreen local lead-gen topic for Bangalore/Chennai |
+| Wed 28 Oct 2026 | Digital marketing agency in Chennai: what to ask before you hire one | digital marketing agency Chennai | Buyer's checklist that supports the Chennai landing page | Chennai is the second SEO priority market |
+| Fri 30 Oct 2026 | After Diwali: a 2-week follow-up plan for festive leads | post-Diwali retargeting | Retargeting, WhatsApp follow-ups, budget step-down, reporting | Moved earlier so businesses can set it up before Diwali (Sun 8 Nov) |
 | Mon 2 Nov 2026 | Gated content is hurting your AI visibility | gated content SEO | When to ungate PDFs and guides, what to keep behind a form for lead gen | Ongoing search-industry debate; ties AEO to lead generation |
-| Wed 4 Nov 2026 | After Diwali: a 2-week follow-up plan for festive leads | post-Diwali retargeting | Retargeting, WhatsApp follow-ups, budget step-down, reporting | Lands just before Diwali (8 Nov) so businesses can set it up in time |
+| Wed 4 Nov 2026 | Dynamic Search Ads are moving to AI Max: what to do before February 2027 | AI Max Google Ads | Plain-English explainer: what changes for DSA, how to test AI Max with experiments, what to check in search terms | Moved from 23 Oct: Google delayed the DSA auto-upgrade to Feb 2027 (blog.google update, 11 Jun 2026), so it is less urgent; new DSA creation ends Jan 2027 |
+
+Note (23 Oct run): AI Max was swapped out for channel prioritization because the DSA deadline moved to February 2027, while the channel controls launched on 14 Oct and matter for festive budgets now.
