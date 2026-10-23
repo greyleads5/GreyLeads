@@ -315,7 +315,13 @@ html.gl-rd-lock,html.gl-rd-lock body{overflow:hidden}
 @keyframes glDkFloat{50%{transform:translateY(-10px)}}
 @media (max-width:720px){.gl-dk-chip{font-size:11.5px;padding:7px 11px}.gl-dk-ring.r2{display:none}.gl-dk-chip[style*="left:-"]{left:-4px!important}.gl-dk-chip[style*="right:-"]{right:-4px!important}}
 @media (prefers-reduced-motion:reduce){.gl-dk-blob,.gl-dk-ring,.gl-dk-chip{animation:none!important}}
-</style></head>
+</style><style id="gl-pg">.gl-pg-hide{display:none!important}
+.gl-pager{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:56px;flex-wrap:wrap}
+.gl-pager a{min-width:46px;height:46px;padding:0 18px;box-sizing:border-box;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;color:#120B24;background:#FFFFFF;border:1px solid rgba(18,11,36,.08);box-shadow:0 10px 24px rgba(76,29,149,.08);transition:background .2s,color .2s}
+.gl-pager a:hover{background:#F3EDFF}
+.gl-pager a[aria-current="page"]{background:#120B24;color:#FFFFFF;border-color:#120B24}
+.gl-pager a[aria-disabled="true"]{opacity:.35;pointer-events:none}
+.gl-pager[hidden]{display:none}</style></head>
 <body>
 <div style="font-family: 'Geist', system-ui, sans-serif; color: #120B24; background: #FBF9FF; width: 100%; box-sizing: border-box; overflow: hidden">
 
@@ -543,5 +549,15 @@ q('topic').textContent=(meta[0]||'').trim();q('title').textContent=title;q('rt')
 var src=c.querySelector('.gl-cv-art'),L=q('art');if(src&&L){var art=src.cloneNode(true);art.style.height='100%';art.style.minHeight='380px';L.innerHTML='';L.appendChild(art);var fit=function(){art.style.setProperty('--cs',Math.min(1.15,Math.max(.6,(art.clientWidth-24)/420)).toFixed(3))};fit();addEventListener('resize',fit)}
 var A={'John Jayaseelan':['Founder','/assets/john-sm.webp'],'Evangeline':['Marketing Head','/assets/mkt2-sm.webp']};
 fetch(href).then(function(r){return r.text()}).then(function(t){var d=new DOMParser().parseFromString(t,'text/html');var m=d.querySelector('meta[name="description"]');if(m)q('dek').textContent=m.getAttribute('content');
-var a=d.querySelector('meta[name="author"]'),n=a&&a.getAttribute('content');if(n){q('author').textContent=n;var k=Object.keys(A).filter(function(x){return n.indexOf(x.split(' ')[0])===0})[0];if(k){q('role').textContent=A[k][0];q('avatar').setAttribute('src',A[k][1])}}}).catch(function(){q('dek').textContent=''})})();</script></body>
+var a=d.querySelector('meta[name="author"]'),n=a&&a.getAttribute('content');if(n){q('author').textContent=n;var k=Object.keys(A).filter(function(x){return n.indexOf(x.split(' ')[0])===0})[0];if(k){q('role').textContent=A[k][0];q('avatar').setAttribute('src',A[k][1])}}}).catch(function(){q('dek').textContent=''})})();</script><script id="gl-pg-js">(function(){var PER=9,cards=[].slice.call(document.querySelectorAll('.gl-post-card'));if(!cards.length)return;
+var grid=cards[cards.length-1].parentElement,pages=Math.ceil(cards.length/PER),nav=document.createElement('nav');nav.className='gl-pager';nav.setAttribute('aria-label','Blog pages');grid.after(nav);
+function cur(){var p=parseInt(new URLSearchParams(location.search).get('page')||'1',10);return isNaN(p)?1:Math.min(Math.max(p,1),pages)}
+function url(p){return p>1?'?page='+p+'#insights':location.pathname+'#insights'}
+function filtered(){var c=document.querySelector('.gl-fchip[aria-pressed="true"]');return c&&c.getAttribute('data-filter')!=='all'}
+function render(){var p=cur(),f=filtered();cards.forEach(function(c,i){c.classList.toggle('gl-pg-hide',!f&&(i<(p-1)*PER||i>=p*PER))});
+ nav.hidden=f||pages<2;if(nav.hidden)return;var h='<a href="'+url(p-1)+'" data-p="'+(p-1)+'"'+(p<2?' aria-disabled="true" tabindex="-1"':'')+'>← Newer</a>';
+ for(var i=1;i<=pages;i++)h+='<a href="'+url(i)+'" data-p="'+i+'"'+(i===p?' aria-current="page"':'')+'>'+i+'</a>';
+ h+='<a href="'+url(p+1)+'" data-p="'+(p+1)+'"'+(p>=pages?' aria-disabled="true" tabindex="-1"':'')+'>Older →</a>';nav.innerHTML=h}
+nav.addEventListener('click',function(e){var a=e.target.closest('a[data-p]');if(!a)return;e.preventDefault();var p=+a.getAttribute('data-p');history.pushState(null,'',p>1?'?page='+p:location.pathname);render();var t=document.getElementById('insights');if(t)t.scrollIntoView({behavior:'smooth'})});
+addEventListener('popstate',render);document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('.gl-fchip,.gl-fclear'))setTimeout(render,0)});render()})();</script></body>
 </html>
