@@ -1,0 +1,22 @@
+# Rebuilds the US site preview (https://greyleads5.github.io/GreyLeads/) on every push to us-site.
+name: US site preview
+on:
+  push:
+    branches: [us-site]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: us-preview
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/build-us-site.py && python3 tools/build-us-preview.py /tmp/preview
+      - name: Publish to gh-pages
+        run: |
+          cd /tmp/preview
+          git init -q -b gh-pages
+          git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "US preview from ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
