@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>GreyLeads Home Preview</title>
+<style>
+@font-face{font-family:'Bricolage Grotesque';src:url(/assets/fonts/bricolage.woff2) format('woff2');font-weight:500 800;font-display:swap}
+@font-face{font-family:'Instrument Serif';src:url(/assets/fonts/instrument-serif-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Geist';src:url(/assets/fonts/geist-v2.woff2) format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'Geist Mono';src:url(/assets/fonts/geist-mono.woff2) format('woff2');font-weight:400 500;font-display:swap}
+/* Rich light: mesh-lit paper, glass layers, 3D devices; one dark showcase band */
+:root{--bg:#FBF9FF;--ink:#120B24;--ink2:#4A4360;--mute:#8C84A3;--line:rgba(18,11,36,.1);--v:#6D2EC7;--v2:#A43FD6;--pk:#FF7A9A;--pe:#FF9A76;--lime:#D4FF4F;--night:#0E0820;
+--disp:'Bricolage Grotesque',system-ui,sans-serif;--ser:'Instrument Serif',Georgia,serif;--body:'Geist',system-ui,sans-serif;--mono:'Geist Mono',ui-monospace,monospace;--max:1320px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+@media(min-width:700px){.wrap{padding-left:32px;padding-right:32px}}
+.it{font-family:var(--ser);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.gt{background:linear-gradient(95deg,var(--v),var(--v2) 45%,var(--pk) 75%,var(--pe));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.btn{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.btn-p{background:linear-gradient(95deg,var(--v),var(--v2));color:#fff;box-shadow:0 18px 40px -12px rgba(109,46,199,.6)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 26px 50px -12px rgba(109,46,199,.7)}
+.btn-g{background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(76,29,149,.08)}
+.btn-g:hover{transform:translateY(-3px)}
+.glass{background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.95);box-shadow:0 24px 50px -16px rgba(60,20,120,.28)}
+
+/* header */
+.hdr{position:fixed;top:14px;left:0;right:0;z-index:60;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.hdr.up{transform:translateY(-140%)}
+.hdr .bar{max-width:1240px;margin:0 auto;height:66px;border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:0 10px 0 22px;gap:20px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--disp);font-weight:800;font-size:21px;letter-spacing:-.03em}
+.nav{display:flex;gap:30px;font-size:15px;color:var(--ink2)}.nav a{text-decoration:none}.nav a:hover{color:var(--ink)}
+.hdr .btn{height:46px;padding:0 20px;font-size:14px;background:var(--ink);color:#fff}
+@media(max-width:900px){.nav{display:none}.hdr{left:12px;right:12px}}
+
+/* hero */
+.hero{position:relative;padding:150px 0 90px;overflow:hidden}
+.mesh{position:absolute;inset:0;z-index:0;pointer-events:none}
+.mesh i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75;animation:drift 16s ease-in-out infinite alternate}
+.mesh i:nth-child(1){width:620px;height:620px;left:-160px;top:-140px;background:#D7C4FF}
+.mesh i:nth-child(2){width:520px;height:520px;right:-120px;top:40px;background:#FFD2E1;animation-delay:-5s}
+.mesh i:nth-child(3){width:560px;height:560px;left:35%;bottom:-260px;background:#C9E4FF;animation-delay:-9s}
+.mesh::after{content:'';position:absolute;inset:0;background:url(/assets/grain.webp);opacity:.18;mix-blend-mode:overlay}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.12)}}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;font-size:13px;font-weight:600}
+.pill b{background:var(--ink);color:#fff;border-radius:999px;padding:3px 10px;font-size:11px;letter-spacing:.06em}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(50px,7.4vw,112px);line-height:.92;letter-spacing:-.05em;margin:26px 0 0}
+h1 .it{font-size:1.04em}
+.w{display:inline-block;opacity:0;transform:translateY(40%) rotate(3deg);animation:wd .9s cubic-bezier(.2,.75,.15,1) forwards}
+@keyframes wd{to{opacity:1;transform:none}}
+.sub{font-size:19px;color:var(--ink2);max-width:540px;margin:28px 0 0}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.trust{display:flex;align-items:center;gap:14px;margin-top:38px;font-size:14px;color:var(--ink2)}
+.faces{display:flex}.faces img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #fff;margin-left:-10px;background:#eee}.faces img:first-child{margin-left:0}
+.stars{color:#F59E0B;letter-spacing:2px}
+.fade{opacity:0;transform:translateY(18px);animation:wd 1s cubic-bezier(.2,.7,.2,1) forwards}
+
+/* 3D scene */
+.scene{position:relative;height:600px;perspective:1600px}
+.stage{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(calc(var(--mx,0)*8deg - 10deg)) rotateX(calc(var(--my,0)*-6deg + 6deg));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px dashed rgba(109,46,199,.28);transform:translate(-50%,-50%)}
+.ring.a{width:520px;height:520px;animation:spin 70s linear infinite}.ring.b{width:680px;height:680px;border-style:solid;border-color:rgba(109,46,199,.1);animation:spin 100s linear infinite reverse}
+.ring b{position:absolute;top:-6px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--v);box-shadow:0 0 0 7px rgba(109,46,199,.14)}.ring.b b{background:var(--pe)}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.laptop{position:absolute;left:2%;top:14%;width:86%;transform:translateZ(40px)}
+.lscreen{background:#0A0A0B;border-radius:16px 16px 0 0;padding:9px 9px 12px;border:1.5px solid #3A3A3D;box-shadow:0 40px 80px -20px rgba(18,11,36,.5)}
+.lscreen .shots{position:relative;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#fff}
+.shots img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity 1s ease}
+.shots img.on{opacity:1}
+.lbase{width:112%;margin-left:-6%;height:14px;border-radius:2px 2px 16px 16px;background:linear-gradient(#E9E8E6,#B4B3B0 70%,#8E8D8A);box-shadow:0 26px 40px -12px rgba(18,11,36,.4)}
+.phone{position:absolute;right:2%;bottom:6%;width:26%;aspect-ratio:9/19;border-radius:30px;padding:6px;background:linear-gradient(145deg,#2A2433,#0E0A14);box-shadow:0 40px 70px -16px rgba(18,11,36,.55);transform:translateZ(120px) rotate(6deg);animation:bob 7s ease-in-out infinite}
+.phone>div{width:100%;height:100%;border-radius:25px;overflow:hidden;position:relative;background:#fff}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top}
+.phone>div::before{content:'';position:absolute;top:8px;left:50%;width:34%;height:14px;margin-left:-17%;border-radius:999px;background:#000;z-index:1}
+@keyframes bob{50%{translate:0 -12px}}
+.card{position:absolute;border-radius:18px;padding:14px 16px;display:flex;align-items:center;gap:12px;font-size:13px;transform-style:preserve-3d;animation:bob 6s ease-in-out infinite}
+.card .ic{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;flex:none}
+.card strong{display:block;font-size:15px;line-height:1.15}.card small{color:var(--ink2)}
+.c1{left:-4%;top:6%;transform:translateZ(160px)}
+.c2{right:-2%;top:2%;transform:translateZ(90px);animation-delay:-2s;background:var(--ink)!important;color:#fff;border-color:var(--ink)!important}
+.c2 small{color:#CFC6EA}
+.c2 .big{font-family:var(--disp);font-weight:800;font-size:30px;letter-spacing:-.04em;line-height:1}
+.c3{left:6%;bottom:2%;transform:translateZ(180px);animation-delay:-4s}
+.spark{display:flex;align-items:flex-end;gap:3px;height:30px}
+.spark i{width:6px;border-radius:2px;background:linear-gradient(var(--v2),var(--v))}
+.toast{position:absolute;left:30%;top:46%;transform:translateZ(200px);border-radius:16px;padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:13px;opacity:0;animation:toast 8s ease-in-out infinite 2s}
+.toast i{width:30px;height:30px;border-radius:10px;background:#22C55E;color:#fff;font-style:normal;display:flex;align-items:center;justify-content:center}
+@keyframes toast{0%{opacity:0;translate:0 16px}8%,40%{opacity:1;translate:0 0}48%,100%{opacity:0;translate:0 -10px}}
+
+/* logos */
+.logos{position:relative;z-index:1;margin-top:20px}
+.logos .glass{border-radius:24px;padding:22px 0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.lt{display:flex;gap:60px;align-items:center;width:max-content;animation:marq 48s linear infinite}
+.lt img{height:28px;width:auto;filter:brightness(0);opacity:.55}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* dark band */
+.night{position:relative;margin:110px 16px 0;border-radius:48px;background:var(--night);color:#fff;overflow:hidden;padding:120px 0}
+.night::before{content:'';position:absolute;inset:0;background:radial-gradient(60% 70% at 15% 0%,rgba(109,46,199,.55),transparent 60%),radial-gradient(50% 60% at 100% 100%,rgba(255,122,89,.3),transparent 60%),radial-gradient(40% 50% at 70% 30%,rgba(164,63,214,.25),transparent 60%)}
+.night>*{position:relative}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(40px,5.6vw,84px);line-height:.96;letter-spacing:-.045em;margin:18px 0 0}
+.night .eyebrow{color:#9A8FC0}
+.nstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:70px}
+.ns{border-radius:24px;padding:26px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.ns b{display:block;font-family:var(--disp);font-weight:800;font-size:clamp(40px,4.4vw,64px);letter-spacing:-.05em;line-height:1;background:linear-gradient(95deg,#fff 40%,#E3B6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ns span{display:block;margin-top:10px;color:#CFC6EA;font-size:15px}
+.bigmarq{margin-top:90px;overflow:hidden}
+.bigmarq div{display:flex;gap:40px;width:max-content;animation:marq 40s linear infinite;font-family:var(--disp);font-weight:800;font-size:clamp(60px,9vw,140px);letter-spacing:-.05em;line-height:1}
+.bigmarq span{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.35)}
+.bigmarq em{font-family:var(--ser);font-weight:400}
+
+/* bento */
+section{padding-top:130px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.lead{font-size:19px;color:var(--ink2);max-width:520px;margin:0}
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:minmax(0,auto);gap:16px;margin-top:60px}
+.tile{position:relative;border-radius:32px;padding:30px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;min-height:380px;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.tile:hover{transform:translateY(-6px);box-shadow:0 40px 80px -30px rgba(60,20,120,.4)}
+.t1{grid-column:span 4;min-height:420px;background:linear-gradient(140deg,#EFE6FF,#FFE6EE)}
+.t2{grid-column:span 2;background:var(--ink);color:#fff}
+.t3{grid-column:span 2;background:linear-gradient(140deg,#E2F1FF,#ECE6FF)}
+.t4{grid-column:span 4;background:linear-gradient(140deg,#FFF0E2,#FFE3EC)}
+.tile .n{font-family:var(--mono);font-size:12px;letter-spacing:.12em;opacity:.6}
+.tile h3{font-family:var(--disp);font-weight:800;font-size:clamp(30px,3vw,42px);letter-spacing:-.04em;line-height:1;margin:10px 0 10px}
+.tile p{margin:0;max-width:360px;opacity:.75;font-size:16px}
+.tile .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tile .tags span{font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.7)}
+.t2 .tags span{background:rgba(255,255,255,.1)}
+.vis{position:absolute;right:24px;bottom:24px}
+/* tile visuals */
+.mini{width:min(440px,52vw);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -18px rgba(60,20,120,.45);transform:rotate(-3deg) translate(20px,30px);transition:transform .6s cubic-bezier(.2,.7,.2,1)}.tile:hover .mini{transform:rotate(-1deg) translate(10px,10px)}.mini .mb{display:flex;gap:5px;padding:8px 10px;background:#F3F0FA}.mini .mb i{width:8px;height:8px;border-radius:50%;background:#DCD5EA}.mini img{width:100%;aspect-ratio:16/9.5;object-fit:cover;object-position:top}
+.wf{width:300px;border-radius:14px;background:#fff;box-shadow:0 30px 60px -20px rgba(60,20,120,.4);padding:12px;transform:rotate(-4deg)}
+.wf .bar{height:8px;display:flex;gap:4px;margin-bottom:10px}.wf .bar i{width:8px;height:8px;border-radius:50%;background:#E0D9EE}
+.wf .hd{height:12px;width:70%;border-radius:4px;background:var(--ink);margin-bottom:6px}.wf .hd.s{width:45%;background:#D9CCF5}
+.wf .im{height:90px;border-radius:8px;margin:10px 0;background:linear-gradient(120deg,#C9B3FF,#FFB8D9)}
+.wf .cta{height:22px;width:40%;border-radius:999px;background:var(--v)}
+.adstack{position:relative;width:170px;height:200px}
+.adstack span{position:absolute;inset:0;border-radius:18px;box-shadow:0 20px 40px -12px rgba(0,0,0,.5)}
+.adstack span:nth-child(1){background:linear-gradient(140deg,#6D2EC7,#FF7A9A);transform:rotate(-10deg) translateX(-30px)}
+.adstack span:nth-child(2){background:linear-gradient(140deg,#1F7AE0,#5EEAD4);transform:rotate(-2deg)}
+.adstack span:nth-child(3){background:#fff;transform:rotate(8deg) translateX(28px);display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:var(--ink);font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:-.03em;line-height:1}
+.adstack small{font-family:var(--mono);font-size:10px;color:#15803D;font-weight:500;letter-spacing:.06em;margin-bottom:6px}
+.chart{width:250px;border-radius:18px;background:#fff;padding:16px;box-shadow:0 30px 60px -20px rgba(31,122,224,.35)}
+.chart .lbl{font-family:var(--mono);font-size:10px;color:var(--mute);letter-spacing:.1em}
+.chart .num{font-family:var(--disp);font-weight:800;font-size:30px;letter-spacing:-.04em}
+.chart svg{width:100%;height:70px}
+.flow{display:flex;align-items:center;gap:8px}
+.flow span{padding:10px 14px;border-radius:14px;background:#fff;font-size:13px;font-weight:600;box-shadow:0 14px 30px -10px rgba(255,122,89,.4);white-space:nowrap}
+.flow i{width:26px;height:2px;background:linear-gradient(90deg,var(--v),var(--pe));position:relative}
+.flow i::after{content:'';position:absolute;right:-2px;top:-3px;border:4px solid transparent;border-left-color:var(--pe)}
+
+/* horizontal work */
+.hz{height:300vh;position:relative;margin-top:30px}
+.hz-pin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hz-track{display:flex;gap:28px;padding-left:max(32px,calc((100vw - 1256px)/2));will-change:transform;margin-top:40px}
+.wk{flex:0 0 min(78vw,760px);text-decoration:none}
+.wk-img{position:relative;height:min(56vh,460px);border-radius:32px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.wk-img .dv{width:74%;border-radius:12px;overflow:hidden;box-shadow:0 40px 80px -20px rgba(0,0,0,.45);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.wk-img .dv img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.wk:hover .dv{transform:scale(1.04) translateY(-6px)}
+.wk-img .res{position:absolute;left:22px;top:22px;border-radius:16px;padding:12px 16px}
+.wk-img .res b{display:block;font-family:var(--disp);font-size:24px;letter-spacing:-.03em;line-height:1.05}
+.wk-img .res small{color:var(--ink2);font-size:13px}
+.wk-meta{display:flex;justify-content:space-between;gap:16px;margin-top:18px;align-items:baseline}
+.wk-meta h3{font-family:var(--disp);font-size:30px;letter-spacing:-.03em;margin:0}
+.wk-meta span{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--mute);text-transform:uppercase}
+.hz-prog{height:3px;border-radius:3px;background:var(--line);margin-top:34px;overflow:hidden}
+.hz-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--v),var(--pe))}
+
+/* process */
+.proc{position:relative;margin-top:70px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.pline{position:absolute;left:0;right:0;top:34px;height:2px;background:var(--line)}
+.pline i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--v),var(--pe));transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.proc.in .pline i{width:100%}
+.ps{position:relative;border-radius:26px;padding:24px;background:#fff;box-shadow:0 20px 50px -24px rgba(60,20,120,.25);margin-top:70px}
+.ps .dot{position:absolute;top:-46px;left:24px;width:24px;height:24px;border-radius:50%;background:#fff;border:2px solid var(--v);box-shadow:0 0 0 6px rgba(109,46,199,.1)}
+.ps h3{font-family:var(--disp);font-size:26px;letter-spacing:-.03em;margin:8px 0 8px}
+.ps p{margin:0;color:var(--ink2);font-size:15px}
+
+/* voices */
+.voices{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:16px;margin-top:60px}
+.q{border-radius:36px;padding:clamp(30px,5vw,64px);background:linear-gradient(140deg,#EFE6FF,#FFE6EE);position:relative;overflow:hidden}
+.q .mk{font-family:var(--ser);font-size:160px;line-height:.6;color:var(--v);opacity:.25;position:absolute;right:30px;top:40px}
+.q blockquote{margin:0;font-family:var(--ser);font-style:italic;font-size:clamp(28px,3vw,44px);line-height:1.15;letter-spacing:-.01em;min-height:3.5em}
+.q cite{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:30px;font-style:normal}
+.q cite b{display:block}.q cite small{color:var(--ink2)}
+.qn{display:flex;gap:8px}.qn button{all:unset;cursor:pointer;width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 20px rgba(60,20,120,.12)}
+.qn button:focus-visible{outline:2px solid var(--v);outline-offset:3px}
+.fd{border-radius:36px;overflow:hidden;position:relative;min-height:420px;color:#fff}
+.fd img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.fd::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(14,8,32,.85))}
+.fd div{position:absolute;left:28px;right:28px;bottom:26px;z-index:1}
+.fd b{font-family:var(--disp);font-size:24px;letter-spacing:-.03em}.fd small{display:block;color:#E4DCF5}
+
+/* cta */
+.cta{margin:130px 16px 0;border-radius:48px;position:relative;overflow:hidden;color:#fff;background:linear-gradient(120deg,#5B22B5,#A43FD6 55%,#FF7A59);padding:120px 0}
+.cta::after{content:'';position:absolute;inset:0;background:url(/assets/grain.webp);opacity:.2;mix-blend-mode:overlay}
+.cta>*{position:relative;z-index:1}
+.cta h2{font-size:clamp(56px,9vw,150px);line-height:.88}
+.cta p{font-size:20px;opacity:.9;max-width:560px;margin:26px 0 0}
+.cta .btn-w{background:#fff;color:var(--ink);height:64px;padding:0 32px;font-size:17px}
+.cta .row{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+footer{padding:50px 0 calc(50px + env(safe-area-inset-bottom,0px));font-size:14px;color:var(--ink2)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none;margin-left:20px}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr}.scene{height:460px;margin-top:20px}
+  .nstats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bento{grid-template-columns:1fr}.t1,.t2,.t3,.t4{grid-column:auto}
+  .proc{grid-template-columns:1fr 1fr}.pline{display:none}
+  .voices{grid-template-columns:1fr}
+  .hz{height:auto}.hz-pin{position:relative;height:auto;padding:20px 0}
+  .hz-track{overflow-x:auto;scroll-snap-type:x mandatory;padding:0 20px 10px;scrollbar-width:none;transform:none!important}
+  .hz-track::-webkit-scrollbar{display:none}.wk{flex-basis:84vw;scroll-snap-align:start}.hz-prog{display:none}
+}
+@media(max-width:560px){
+  .mini{width:78vw;transform:rotate(-3deg) translate(30px,40px)}
+  .hero{padding-top:118px}.sub{font-size:17px}.scene{height:380px}
+  .ring.b{display:none}.ring.a{width:340px;height:340px}
+  .c1{left:0;top:0}.c2{right:0}.c3{left:0}.card{padding:10px 12px;font-size:12px}.card strong{font-size:13px}.c2 .big{font-size:24px}.card .ic{width:30px;height:30px}
+  .toast{left:20%}
+  .night,.cta{margin-left:10px;margin-right:10px;border-radius:32px;padding:80px 0}
+  .tile{min-height:340px;padding:24px}.vis{right:16px;bottom:16px;transform:scale(.8);transform-origin:bottom right}
+  .proc{grid-template-columns:1fr}
+  .wk-img{height:300px}
+  footer a{margin:0 16px 0 0}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.w,.fade,.rv{opacity:1;transform:none}.toast{opacity:1}}
+</style>
+</head>
+<body>
+<header class="hdr" id="hdr"><div class="bar glass">
+  <a class="logo" href="https://greyleads.in/"><svg width="32" height="32" viewBox="0 0 536 536" aria-hidden="true"><path fill="#8C8C8C" d="M270 45A235 235 0 1 0 505 280L295 280L295 352L413 352A160 160 0 1 1 270 120Z"/><path fill="#6C2BC4" d="M295 45H357V196H505V258H295Z"/><rect x="370" y="118" width="66" height="66" rx="3" fill="#7A45CF"/><rect x="392" y="52" width="52" height="50" rx="3" fill="#9466DB"/><rect x="450" y="108" width="52" height="52" rx="3" fill="#8A5AD6"/><rect x="470" y="57" width="36" height="36" rx="3" fill="#A47DE0"/></svg><span><span style="color:#8C8C8C">Grey</span>Leads</span></a>
+  <nav class="nav"><a href="#services">Services</a><a href="#work">Work</a><a href="https://greyleads.in/about">About</a><a href="https://greyleads.in/blog">Blog</a><a href="https://greyleads.in/contact">Contact</a></nav>
+  <a class="btn" href="https://greyleads.in/contact">Start a project ↗</a>
+</div></header>
+
+<main>
+<div class="hero">
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill glass fade"><b>NEW</b>Now booking Q1 2027 · India &amp; worldwide</span>
+      <h1 id="h1">Most brands blend into the grey. <span class="it gt">Yours will lead.</span></h1>
+      <p class="sub fade" style="animation-delay:.7s">GreyLeads is a full-service digital marketing studio. We design the websites and apps, create the ads, and run the campaigns that turn attention into customers, for brands across India and around the world.</p>
+      <div class="ctas fade" style="animation-delay:.85s">
+        <a class="btn btn-p" href="https://greyleads.in/contact">Start a project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-g" href="#work">See the work</a>
+      </div>
+      <div class="trust fade" style="animation-delay:1s">
+        <div class="faces"><img src="/assets/john-sm.webp" alt=""><img src="/assets/mkt2-sm.webp" alt=""><img src="/assets/cfo-v2-sm.webp" alt=""><img src="/assets/cto2-sm.webp" alt=""></div>
+        <span><span class="stars">★★★★★</span><br>24+ brands across 6 industries</span>
+      </div>
+    </div>
+    <div class="scene fade" style="animation-delay:.4s" id="scene" aria-hidden="true">
+      <div class="stage">
+        <span class="ring b"><b></b></span><span class="ring a"><b></b></span>
+        <div class="laptop"><div class="lscreen"><div class="shots" id="shots">
+          <img class="on" src="/assets/gw-desktop-720.webp" alt="" fetchpriority="high"><img src="/assets/qd-desktop-720.webp" alt="" loading="lazy"><img src="/assets/px-desktop-720.webp" alt="" loading="lazy"><img src="/assets/sol-desktop-720.webp" alt="" loading="lazy">
+        </div></div><div class="lbase"></div></div>
+        <div class="phone"><div><img src="/assets/ia-mobile-360.webp" alt=""></div></div>
+        <div class="card glass c1"><span class="ic" style="background:#22C55E">✓</span><span><strong>Page 1 on Google</strong><small>Greyweave · 6 months</small></span></div>
+        <div class="card glass c2"><span><span class="big">150+</span><small>leads every month</small></span><span class="spark"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:58%"></i><i style="height:72%"></i><i style="height:100%"></i></span></div>
+        <div class="card glass c3"><span class="ic" style="background:linear-gradient(140deg,#6D2EC7,#FF7A9A)">AI</span><span><strong>Recommended by ChatGPT</strong><small>AEO · answer engines</small></span></div>
+        <div class="toast glass"><i>↓</i><span><strong>New lead</strong><br><small>Solar course · just now</small></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap logos"><div class="glass"><div class="lt" id="lt"></div></div></div>
+</div>
+
+<div class="night">
+  <div class="wrap">
+    <span class="eyebrow rv">(01) Our point of view</span>
+    <h2 class="rv">Anyone can get you seen.<br><span class="it gt">We get you chosen.</span></h2>
+    <div class="nstats">
+      <div class="ns rv"><b data-n="20" data-s="+">20+</b><span>websites &amp; apps shipped</span></div>
+      <div class="ns rv"><b data-n="50" data-s="+">50+</b><span>ad campaigns launched</span></div>
+      <div class="ns rv"><b>$1.2M+</b><span>client revenue influenced</span></div>
+      <div class="ns rv"><b data-n="5200" data-s="+">5,200+</b><span>qualified leads generated</span></div>
+    </div>
+  </div>
+  <div class="bigmarq" aria-hidden="true"><div><span>Websites</span><em class="gt">·</em><span>Apps</span><em class="gt">·</em><span>Ads</span><em class="gt">·</em><span>SEO</span><em class="gt">·</em><span>AEO</span><em class="gt">·</em><span>Leads</span><em class="gt">·</em><span>Websites</span><em class="gt">·</em><span>Apps</span><em class="gt">·</em><span>Ads</span><em class="gt">·</em><span>SEO</span><em class="gt">·</em><span>AEO</span><em class="gt">·</em><span>Leads</span><em class="gt">·</em></div></div>
+</div>
+
+<section class="wrap" id="services">
+  <div class="head rv"><div><span class="eyebrow">(02) Capabilities</span><h2>Everything you need<br>to <span class="it gt">win online.</span></h2></div><p class="lead">Four disciplines, one senior team. No agencies pointing fingers, no gaps between the website and the ads.</p></div>
+  <div class="bento">
+    <a class="tile t1 rv" href="https://greyleads.in/websites"><span class="n">01 · BUILD</span><h3>Websites &amp; apps<br>that sell.</h3><p>Fast, mobile-first websites, e-commerce and iOS &amp; Android apps.</p><div class="tags"><span>Websites</span><span>Apps</span><span>UI/UX</span></div>
+      <div class="vis"><div class="mini"><div class="mb"><i></i><i></i><i></i></div><img src="/assets/gw-desktop-720.webp" alt="" loading="lazy"></div></div></a>
+    <a class="tile t2 rv" href="https://greyleads.in/creative-ads"><span class="n">02 · CREATE</span><h3>Ads people<br>don't skip.</h3><p>Reels, statics and brand identities, tested weekly.</p>
+      <div class="vis"><div class="adstack"><span></span><span></span><span><small>CTR 3.9% · WINNER</small>Stop the scroll.</span></div></div></a>
+    <a class="tile t3 rv" href="https://greyleads.in/lead-generation"><span class="n">03 · GROW</span><h3>Demand<br>on tap.</h3><p>Lead gen, paid ads, SEO and AEO.</p>
+      <div class="vis"><div class="chart"><div class="lbl">QUALIFIED LEADS</div><div class="num">+150/mo</div><svg viewBox="0 0 200 70" preserveAspectRatio="none"><defs><linearGradient id="g1" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#A43FD6" stop-opacity=".35"/><stop offset="1" stop-color="#A43FD6" stop-opacity="0"/></linearGradient></defs><path d="M0 60 L30 52 L60 55 L90 40 L120 36 L150 22 L200 6 L200 70 L0 70Z" fill="url(#g1)"/><path d="M0 60 L30 52 L60 55 L90 40 L120 36 L150 22 L200 6" fill="none" stroke="#6D2EC7" stroke-width="3" stroke-linecap="round"/></svg></div></div></a>
+    <a class="tile t4 rv" href="https://greyleads.in/automation"><span class="n">04 · SCALE</span><h3>Systems that<br>compound.</h3><p>CRM, WhatsApp and email journeys that follow up in seconds.</p><div class="tags"><span>CRM</span><span>WhatsApp API</span><span>Analytics</span></div>
+      <div class="vis"><div class="flow"><span>New lead</span><i></i><span>WhatsApp in 1s</span><i></i><span>Sales alert</span></div></div></a>
+  </div>
+</section>
+
+<section id="work">
+  <div class="hz" id="hz"><div class="hz-pin">
+    <div class="wrap head"><div><span class="eyebrow">(03) Selected work</span><h2>Proof, <span class="it gt">not promises.</span></h2></div><a class="btn btn-g" href="https://greyleads.in/work">All case studies</a></div>
+    <div class="hz-track" id="hzt">
+      <a class="wk" href="https://greyleads.in/work/greyweave"><div class="wk-img" style="background:linear-gradient(140deg,#7A3BE6,#C26BFF)"><div class="dv"><img src="/assets/gw-desktop-720.webp" alt="Greyweave website" loading="lazy"></div><div class="res glass"><b>Page 1</b><small>on Google in 6 months</small></div></div><div class="wk-meta"><h3>Greyweave</h3><span>Handcrafted rugs · SEO</span></div></a>
+      <a class="wk" href="https://greyleads.in/work/iacharya"><div class="wk-img" style="background:linear-gradient(140deg,#F59E0B,#FF7A59)"><div class="dv" style="width:30%;border-radius:26px;border:6px solid #0E0A14"><img src="/assets/ia-mobile-360.webp" alt="IAcharya mobile site" loading="lazy" style="aspect-ratio:9/18"></div><div class="res glass"><b>150+ leads</b><small>every month</small></div></div><div class="wk-meta"><h3>IAcharya</h3><span>Solar training · SEO + ads</span></div></a>
+      <a class="wk" href="https://greyleads.in/work/solize"><div class="wk-img" style="background:linear-gradient(140deg,#0A66C2,#3B9BFF)"><div class="dv"><img src="/assets/sol-desktop-720.webp" alt="SOLIZE LinkedIn campaign" loading="lazy"></div><div class="res glass"><b>LinkedIn B2B</b><small>global brand campaigns</small></div></div><div class="wk-meta"><h3>SOLIZE</h3><span>Digital engineering</span></div></a>
+      <a class="wk" href="https://greyleads.in/work/pixcity"><div class="wk-img" style="background:linear-gradient(140deg,#16A06A,#5EEAD4)"><div class="dv"><img src="/assets/px-desktop-720.webp" alt="Pix.city website" loading="lazy"></div><div class="res glass"><b>100% verified</b><small>decision-makers, France &amp; EU</small></div></div><div class="wk-meta"><h3>Pix.city</h3><span>Local marketing · France</span></div></a>
+      <a class="wk" href="https://greyleads.in/work/quadrate"><div class="wk-img" style="background:linear-gradient(140deg,#2F4BE0,#8A5AD6)"><div class="dv"><img src="/assets/qd-desktop-720.webp" alt="Quadrate website" loading="lazy"></div><div class="res glass"><b>Zero junk</b><small>targeted, verified data</small></div></div><div class="wk-meta"><h3>Quadrate</h3><span>Translation services</span></div></a>
+    </div>
+    <div class="wrap"><div class="hz-prog"><i id="hzp"></i></div></div>
+  </div></div>
+</section>
+
+<section class="wrap">
+  <div class="head rv"><div><span class="eyebrow">(04) How we work</span><h2>From first call<br>to <span class="it gt">first lead.</span></h2></div><p class="lead">Senior hands only, revenue as the KPI, and one team from website to CRM.</p></div>
+  <div class="proc" id="proc"><div class="pline"><i></i></div>
+    <div class="ps rv"><span class="dot"></span><span class="eyebrow">Week 1</span><h3>Discover</h3><p>Your business, customers and competitors, and the numbers that define success.</p></div>
+    <div class="ps rv"><span class="dot"></span><span class="eyebrow">Weeks 2–6</span><h3>Design &amp; build</h3><p>Website, app, brand and campaigns, tested before anything goes live.</p></div>
+    <div class="ps rv"><span class="dot"></span><span class="eyebrow">Launch day</span><h3>Launch</h3><p>Live with tracking from day one, so every rupee and lead is visible.</p></div>
+    <div class="ps rv"><span class="dot"></span><span class="eyebrow">Every week</span><h3>Grow</h3><p>Testing, monthly reviews, and budget moved to whatever is winning.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="head rv"><div><span class="eyebrow">(05) In their words</span><h2>Clients who <span class="it gt">stayed.</span></h2></div></div>
+  <div class="voices">
+    <div class="q rv"><span class="mk" aria-hidden="true">“</span><blockquote id="qt">The best thing about GreyLeads is, they are way more professional than they seem. The services provided by them have the potential of receiving planned results.</blockquote>
+      <cite><span><b id="qn">Karthik Ramakrishnan</b><small id="qr">Chairman, IAcharya Silicon Limited</small></span><span class="qn"><button type="button" id="qp" aria-label="Previous testimonial">←</button><button type="button" id="qx" aria-label="Next testimonial">→</button></span></cite></div>
+    <a class="fd rv" href="https://greyleads.in/about"><img src="/assets/john-md.webp" alt="John Jayaseelan, Founder and CEO" loading="lazy"><div><b>John Jayaseelan</b><small>Founder &amp; CEO · close to every account</small></div></a>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#F0E6FF">(06) Let's talk</span>
+    <h2>Ready to<br><span class="it">lead?</span></h2>
+    <div class="row"><p>Tell us where you want your brand in twelve months. We reply within 24 hours with a plan to get there, wherever you are in the world.</p>
+      <a class="btn btn-w" href="https://greyleads.in/contact">Get a free growth plan →</a></div>
+  </div>
+</div>
+</main>
+<footer><div class="wrap"><span>© 2026 GreyLeads · Bengaluru, India · Working worldwide</span><span><a href="mailto:contact@greyleads.in">contact@greyleads.in</a><a href="https://wa.me/917010552833">WhatsApp</a><a href="https://greyleads.in/privacy">Privacy</a></span></div></footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// headline word animation
+var h=document.getElementById('h1');(function split(el,d){[].slice.call(el.childNodes).forEach(function(n){if(n.nodeType===1&&n.classList.contains('gt')){n.classList.add('w');n.style.animationDelay=(d.i++*0.06+.25)+'s';return}if(n.nodeType===3){var f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;if(/^\s+$/.test(t)){f.appendChild(document.createTextNode(t));return}var s=document.createElement('span');s.className='w';s.textContent=t;s.style.animationDelay=(d.i++*0.06+.15)+'s';f.appendChild(s)});n.replaceWith(f)}else split(n,d)})})(h,{i:0});
+// header hide/show
+var hd=document.getElementById('hdr'),last=0,tk=false;addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){var y=scrollY;if(y>last+6&&y>200)hd.classList.add('up');else if(y<last-6)hd.classList.remove('up');last=y;tk=false})},{passive:true});
+// logos
+var L=[2,3,4,7,9,11,1,5,6,8,13,14,15,17,18,20],lt=document.getElementById('lt'),s='';for(var r=0;r<2;r++)L.forEach(function(n){s+='<img src="/assets/logo-'+n+'.webp" alt="" loading="lazy">'});lt.innerHTML=s;
+// laptop screens
+var im=document.querySelectorAll('#shots img'),k=0;if(!rm)setInterval(function(){im[k].classList.remove('on');k=(k+1)%im.length;im[k].classList.add('on')},3500);
+// 3D parallax
+var sc=document.getElementById('scene');if(!rm&&matchMedia('(hover: hover)').matches){document.querySelector('.hero').addEventListener('mousemove',function(e){var b=sc.getBoundingClientRect();sc.style.setProperty('--mx',((e.clientX-b.left)/b.width-.5).toFixed(3));sc.style.setProperty('--my',((e.clientY-b.top)/b.height-.5).toFixed(3))})}
+// horizontal scroll work
+var hz=document.getElementById('hz'),tr=document.getElementById('hzt'),pg=document.getElementById('hzp'),wide=matchMedia('(min-width: 1001px)');
+function hs(){if(!wide.matches){tr.style.transform='';return}var r=hz.getBoundingClientRect(),max=hz.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,-r.top/max)),dist=tr.scrollWidth-innerWidth+64;tr.style.transform='translateX('+(-p*dist)+'px)';pg.style.width=(p*100)+'%'}
+addEventListener('scroll',function(){requestAnimationFrame(hs)},{passive:true});addEventListener('resize',hs);hs();
+// testimonials
+var Q=[['The best thing about GreyLeads is, they are way more professional than they seem. The services provided by them have the potential of receiving planned results.','Karthik Ramakrishnan','Chairman, IAcharya Silicon Limited'],['They have the ability to feed leads into our pipeline, take off this activity from us by making this a continuous process. This has helped us reach out to potential clients faster.','Kiran Ramakrishna','Founder, textmercato'],['Their team is highly professional, responsive, and truly understands our brand’s unique needs.','Mani Kandan','Founder, Lavion']],qi=0;
+function q(n){qi=(n+Q.length)%Q.length;document.getElementById('qt').textContent=Q[qi][0];document.getElementById('qn').textContent=Q[qi][1];document.getElementById('qr').textContent=Q[qi][2]}
+document.getElementById('qp').onclick=function(){q(qi-1)};document.getElementById('qx').onclick=function(){q(qi+1)};
+// reveal + counters
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+ (e.target.matches('[data-n]')?[e.target]:[].slice.call(e.target.querySelectorAll('[data-n]'))).forEach(function(el){if(rm)return;var to=+el.dataset.n,sf=el.dataset.s||'',t0=null;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1500);el.textContent=Math.round(to*(1-Math.pow(1-p,3))).toLocaleString('en-IN')+sf;if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})})},{rootMargin:'0px 0px -12% 0px'});
+document.querySelectorAll('.rv,#proc').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
