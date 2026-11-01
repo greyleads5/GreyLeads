@@ -321,7 +321,7 @@ html.gl-rd-lock,html.gl-rd-lock body{overflow:hidden}
 .gl-pager a:hover{background:#F3EDFF}
 .gl-pager a[aria-current="page"]{background:#120B24;color:#FFFFFF;border-color:#120B24}
 .gl-pager a[aria-disabled="true"]{opacity:.35;pointer-events:none}
-.gl-pager[hidden]{display:none}</style></head>
+.gl-pager[hidden]{display:none}</style><style id="gl-rv">.gl-rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}.gl-rv.in{opacity:1;transform:none}@media (prefers-reduced-motion:reduce){.gl-rv{opacity:1;transform:none;transition:none}}</style></head>
 <body>
 <div style="font-family: 'Geist', system-ui, sans-serif; color: #120B24; background: #FBF9FF; width: 100%; box-sizing: border-box; overflow: hidden">
 
@@ -571,5 +571,9 @@ function render(){var p=cur(),f=filtered();cards.forEach(function(c,i){c.classLi
  for(var i=1;i<=pages;i++)h+='<a href="'+url(i)+'" data-p="'+i+'"'+(i===p?' aria-current="page"':'')+'>'+i+'</a>';
  h+='<a href="'+url(p+1)+'" data-p="'+(p+1)+'"'+(p>=pages?' aria-disabled="true" tabindex="-1"':'')+'>Older →</a>';nav.innerHTML=h}
 nav.addEventListener('click',function(e){var a=e.target.closest('a[data-p]');if(!a)return;e.preventDefault();var p=+a.getAttribute('data-p');history.pushState(null,'',p>1?'?page='+p:location.pathname);render();var t=document.getElementById('insights');if(t)t.scrollIntoView({behavior:'smooth'})});
-addEventListener('popstate',render);document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('.gl-fchip,.gl-fclear'))setTimeout(render,0)});render()})();</script></body>
+addEventListener('popstate',render);document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('.gl-fchip,.gl-fclear'))setTimeout(render,0)});render()})();</script><script id="gl-rv-js">(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var els=[];document.querySelectorAll('section.gl-cv').forEach(function(sec){if(sec.classList.contains('gl-mhero'))return;var box=sec.children.length===1&&sec.firstElementChild.tagName==='DIV'&&!sec.firstElementChild.getAttribute('style')?sec.firstElementChild:sec;
+[].slice.call((box.children.length===1?box.firstElementChild:box).children).forEach(function(c,k){if(c.tagName==='SCRIPT'||c.tagName==='STYLE')return;var r=c.getBoundingClientRect();if(r.top<innerHeight)return;c.classList.add('gl-rv');c.style.transitionDelay=Math.min(k,4)*0.08+'s';els.push(c)})});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)});
+setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})},400)})();</script></body>
 </html>
