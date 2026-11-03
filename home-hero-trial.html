@@ -574,6 +574,21 @@ body[data-hx="w"] .hx-w{display:block}
 @media (max-width:720px){.hx-w{height:auto;min-height:calc(100svh - 80px);max-height:none}.hx-w-fade{background:linear-gradient(180deg,rgba(246,242,252,0) 34%,rgba(246,242,252,.9) 50%,rgba(246,242,252,.97) 100%)}
 .hx-w-in{padding:20px 18px 24px;gap:0}.hx-w-copy{margin-top:auto;padding-top:330px}.hx-w .hx-h{font-size:clamp(44px,12vw,68px)}.hx-w-copy p{font-size:16px;margin:16px 0 22px}.hx-w-foot{margin-top:22px}.hx-w-tip{display:none}}
 </style>
+<style id="hx6-css">
+body[data-hx="x"] .hx-gx{display:block}
+.hx-gx{height:calc(100vh - 118px);min-height:640px;max-height:980px;overflow:hidden}
+#hxx{position:absolute;inset:0;width:100%;height:100%}
+.hx-gx-in{position:relative;z-index:2;height:100%;box-sizing:border-box;max-width:1360px;margin:0 auto;padding:28px 28px 30px;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
+.hx-gx-in a{pointer-events:auto}
+.hx-gx-copy{max-width:620px}
+.hx-gx .hx-h{font-size:clamp(52px,6.6vw,112px)}
+.hx-gx .hx-h .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hx-gx .hx-h .ln>span{display:inline-block;animation:hxu 1.3s cubic-bezier(.16,1,.3,1) both}
+.hx-gx .hx-h .ln:nth-child(2)>span{animation-delay:.08s}.hx-gx .hx-h .ln:nth-child(3)>span{animation-delay:.9s}
+.hx-gx-copy p{font-size:18px;line-height:1.55;color:#4A4360;margin:24px 0 30px;max-width:460px}
+.hx-gx-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#7D7590}
+@media (max-width:720px){.hx-gx{height:auto;min-height:calc(100svh - 80px);max-height:none}.hx-gx-in{padding:20px 18px 24px}.hx-gx-copy{margin-top:auto;padding-top:300px}.hx-gx .hx-h{font-size:clamp(44px,12vw,68px)}.hx-gx-copy p{font-size:16px;margin:16px 0 22px}.hx-gx-foot{margin-top:22px}.hx-gx-foot span:last-child{display:none}#hxxs{display:none}}
+</style>
 </head>
 <body>
 <div style="font-family: 'Geist', system-ui, sans-serif; color: #120B24; background: #FBF9FF; width: 100%; box-sizing: border-box; overflow: hidden">
@@ -653,6 +668,18 @@ body[data-hx="w"] .hx-w{display:block}
 <div class="hx-btns"><a href="#contact-form" class="hx-b1">Start a project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/work" class="hx-b2">See the work</a></div>
 </div>
 <div class="hx-w-foot"><span class="hx-w-now"><i></i>In focus: <b id="hxwn">—</b></span><span class="hx-w-tip">Grey in the distance. Colour up close.</span></div>
+</div>
+</section>
+<section class="hx hx-gx" data-v="x" aria-label="Intro">
+<canvas id="hxx" aria-hidden="true"></canvas>
+<div class="hx-gx-in">
+<div class="hx-meta"><span><i class="hx-live"></i>Booking Q1 2027</span><span id="hxxs">60,000 brands. One that leads.</span></div>
+<div class="hx-gx-copy">
+<h1 class="hx-h"><span class="ln"><span>Most brands</span></span><span class="ln"><span>blend into the grey.</span></span><span class="ln"><span class="hx-gt">Yours will lead.</span></span></h1>
+<p>Every dot is a brand fighting for the same attention. We build the websites, apps, ads and campaigns that give yours its own gravity.</p>
+<div class="hx-btns"><a href="#contact-form" class="hx-b1">Start a project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/work" class="hx-b2">See the work</a></div>
+</div>
+<div class="hx-gx-foot"><span class="hx-w-now"><i></i><b>Move your cursor</b>&nbsp;· you’re the purple star</span><span>Scroll to fly in ↓</span></div>
 </div>
 </section>
 <!-- ===== Variant B: showreel ===== -->
@@ -1321,12 +1348,12 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})},400)})();</script><script id="gl-v4-cnt">(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var box=document.querySelector('.gl-mstats');if(!box)return;
 var els=[].slice.call(box.querySelectorAll('div')).filter(function(d){return /^\d[\d,]*\+$/.test(d.textContent.trim())&&!d.children.length});
 var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();els.forEach(function(el){var to=+el.textContent.replace(/[^\d]/g,''),t0=null;el.style.fontVariantNumeric='tabular-nums';function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1600);el.textContent=Math.round(to*(1-Math.pow(1-p,3))).toLocaleString('en-IN')+'+';if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})},{threshold:.4});io.observe(box)})();</script><script id="gl-wm-js">(function(){var m=document.querySelector('.gl-wm');if(!m)return;if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){m.classList.add('on');return}var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){m.classList.add('on');io.disconnect()}},{threshold:.3});io.observe(m)})();</script>
-<div class="hx-sw" role="group" aria-label="Hero options"><button data-k="w">New<span> · Gallery flight</span></button><button data-k="a">A<span> · Dot field</span></button></div>
+<div class="hx-sw" role="group" aria-label="Hero options"><button data-k="x">New<span> · Grey galaxy</span></button><button data-k="w">W<span> · Gallery flight</span></button><button data-k="a">A<span> · Dot field</span></button></div>
 <script src="/assets/lib/three-r149.min.js"></script>
 <script id="hx-js">(function(){
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,MOB=matchMedia('(max-width: 720px)').matches,FINE=matchMedia('(hover: hover) and (pointer: fine)').matches;
-var cur=(location.hash.match(/hero-([a-hw])/)||[])[1]||'w';
-function setV(k){cur=k;document.body.setAttribute('data-hx',k);document.querySelectorAll('.hx-sw button').forEach(function(b){b.classList.toggle('on',b.dataset.k===k)});if(history.replaceState)history.replaceState(null,'','#hero-'+k);if(k==='a')initA();if(k==='w')initW();if(k==='d')initD();if(k==='e')initE();if(k==='f')initF();if(k==='g')initG();if(k==='h')initH();if(k==='b')startB();else stopB();if(k==='c')startC();else stopC()}
+var cur=(location.hash.match(/hero-([a-hwx])/)||[])[1]||'x';
+function setV(k){cur=k;document.body.setAttribute('data-hx',k);document.querySelectorAll('.hx-sw button').forEach(function(b){b.classList.toggle('on',b.dataset.k===k)});if(history.replaceState)history.replaceState(null,'','#hero-'+k);if(k==='a')initA();if(k==='x')initX();if(k==='w')initW();if(k==='d')initD();if(k==='e')initE();if(k==='f')initF();if(k==='g')initG();if(k==='h')initH();if(k==='b')startB();else stopB();if(k==='c')startC();else stopC()}
 document.querySelectorAll('.hx-sw button').forEach(function(b){b.onclick=function(){setV(b.dataset.k)}});
 /* ---- A ---- */
 var aOn=false;
@@ -1548,6 +1575,50 @@ var wOn=false;function initW(){if(wOn||!window.THREE)return;wOn=true;var sec=doc
    var dist=-z;var m=c.material.uniforms;var near=Math.min(1,Math.max(0,(13-dist)/9));m.uSat.value=near*near;m.uA.value=(u.ok?1:0)*Math.min(1,Math.max(0,(SPAN*.92-dist)/(SPAN*.3)))*Math.min(1,Math.max(0,(dist-.6)/1.6));
    if(dist>2.4&&dist<bd){bd=dist;best=c}m.uHi.value=0});
   if(best){best.material.uniforms.uHi.value=1;if(best.userData.name!==lastName&&bd<7){lastName=best.userData.name;nm.textContent=lastName}}
+  Rr.render(S,C)})(performance.now());
+}
+
+/* ---- X: grey galaxy ---- */
+var xOn=false;function initX(){if(xOn||!window.THREE)return;xOn=true;var sec=document.querySelector('.hx-gx'),cv=document.getElementById('hxx');
+ try{var Rr=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:false,powerPreference:'high-performance'})}catch(e){return}
+ Rr.setPixelRatio(Math.min(devicePixelRatio,MOB?1.5:2));
+ var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,100);C.position.set(0,0,9);var G=new THREE.Group();S.add(G);
+ var N=MOB?22000:60000,pos=new Float32Array(N*3),aR=new Float32Array(N),aT=new Float32Array(N),aS=new Float32Array(N);
+ for(var i=0;i<N;i++){var r=Math.pow(Math.random(),1.6),arm=(i%3)*2.0944,spin=Math.log(r*5+1)*1.9,g1=(Math.random()+Math.random()+Math.random()-1.5)/1.5,sc=g1*(.8-r*.35)+(r<.12?Math.random()*6.28:0);
+  aR[i]=r;aT[i]=arm+spin+sc;aS[i]=Math.random();pos[i*3]=0;pos[i*3+1]=(Math.random()-.5)*.22*(1.1-r)*(Math.random()<.5?1:-1)*Math.random();pos[i*3+2]=0}
+ var geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('aR',new THREE.BufferAttribute(aR,1));geo.setAttribute('aT',new THREE.BufferAttribute(aT,1));geo.setAttribute('aS',new THREE.BufferAttribute(aS,1));
+ var uni={uT:{value:0},uM:{value:new THREE.Vector2(9,9)},uMS:{value:0},uPR:{value:Rr.getPixelRatio()},uRad:{value:MOB?3.4:4.6},uFly:{value:0}};
+ var mat=new THREE.ShaderMaterial({uniforms:uni,transparent:true,depthWrite:false,
+ vertexShader:'uniform float uT,uMS,uPR,uRad,uFly;uniform vec2 uM;attribute float aR,aT,aS;varying float vF,vS,vC;\
+ void main(){float r=aR*uRad;float th=aT+uT*(.05/(.35+aR));vec3 p=vec3(cos(th)*r,position.y*uRad*.6,sin(th)*r);\
+ vec2 d=uM-p.xz;float l=length(d);float f=exp(-l*l*1.1)*uMS;float sw=f*1.4;\
+ float cs=cos(sw),sn=sin(sw);vec2 rel=p.xz-uM;rel=vec2(rel.x*cs-rel.y*sn,rel.x*sn+rel.y*cs)*(1.-f*.45);p.xz=mix(p.xz,uM+rel,step(.0001,f));\
+ p.y+=f*.25;vF=f;vS=aS;vC=1.-aR;vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;\
+ gl_PointSize=(1.1+aS*1.3+f*2.6+vC*.8)*uPR*(9./-mv.z)*(1.+uFly*.6);}',
+ fragmentShader:'varying float vF,vS,vC;void main(){float d=length(gl_PointCoord-.5);float a=smoothstep(.5,.25,d);\
+ vec3 g=mix(vec3(.30,.28,.36),vec3(.62,.6,.68),vS);vec3 pu=mix(vec3(.43,.16,.80),vec3(.93,.36,.5),vS);\
+ vec3 c=mix(g,pu,clamp(vF*1.6,0.,1.));gl_FragColor=vec4(c,a*(.32+vC*.35+vF*.6));}'});
+ var pts=new THREE.Points(geo,mat);G.add(pts);
+ // the purple star
+ var smat=new THREE.ShaderMaterial({uniforms:{uPR:uni.uPR,uT:uni.uT},transparent:true,depthWrite:false,
+ vertexShader:'uniform float uPR,uT;void main(){vec4 mv=modelViewMatrix*vec4(position,1.);gl_Position=projectionMatrix*mv;gl_PointSize=(70.+sin(uT*3.)*6.)*uPR*(9./-mv.z);}',
+ fragmentShader:'void main(){vec2 c=gl_PointCoord-.5;float d=length(c);float core=smoothstep(.09,.06,d);float halo=exp(-d*d*30.)*.6;float ray=(exp(-abs(c.x)*60.)+exp(-abs(c.y)*60.))*exp(-d*7.)*.6;\
+ gl_FragColor=vec4(mix(vec3(.62,.32,.95),vec3(.43,.16,.8),core),clamp(core+halo+ray,0.,1.));}'});
+ var sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.BufferAttribute(new Float32Array(3),3));var star=new THREE.Points(sg,smat);G.add(star);
+ var baseTilt=MOB?-1.05:-1.12,offX=MOB?0:2.2,offY=MOB?1.25:-.1;
+ function size(){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;Rr.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix()}size();addEventListener('resize',size);
+ var ray=new THREE.Raycaster(),v=new THREE.Vector2(),pl=new THREE.Plane(new THREE.Vector3(0,1,0),0),hit=new THREE.Vector3(),inv=new THREE.Matrix4(),m={x:9,y:9,tx:2,ty:1},on=0,last=0,mx=0,my=0;
+ sec.addEventListener('pointermove',function(e){var r=cv.getBoundingClientRect();v.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);mx=v.x;my=v.y;ray.setFromCamera(v,C);inv.copy(G.matrixWorld).invert();var lr=ray.ray.clone().applyMatrix4(inv);if(lr.intersectPlane(pl,hit)){m.tx=hit.x;m.ty=hit.z;last=performance.now();on=1}},{passive:true});
+ var vis=true;new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(sec);
+ var t0=performance.now(),fly=0;
+ (function loop(n){requestAnimationFrame(loop);if(!vis||cur!=='x')return;var t=(n-t0)/1000;uni.uT.value=RM?0:t;
+  if(n-last>2400||!FINE){var a=t*.35;m.tx=Math.cos(a)*2.2;m.ty=Math.sin(a*1.3)*1.6;on=1}
+  m.x+=(m.tx-m.x)*.08;m.y+=(m.ty-m.y)*.08;uni.uM.value.set(m.x,m.y);uni.uMS.value+=(on*Math.min(1,t/1.2)-uni.uMS.value)*.05;
+  sg.attributes.position.array.set([m.x,.18,m.y]);sg.attributes.position.needsUpdate=true;
+  var r=sec.getBoundingClientRect(),tf=Math.max(0,Math.min(1,-r.top/(r.height*.8)));fly+=(tf-fly)*.1;uni.uFly.value=fly;
+  var intro=Math.min(1,t/2.4),ie=1-Math.pow(1-intro,3);
+  G.rotation.x=baseTilt+fly*.75+(MOB?0:my*.08);G.rotation.y=(MOB?0:mx*.12)-(1-ie)*1.2;G.rotation.z=MOB?0:.18;
+  G.position.set(offX*(1-fly*.7),offY+fly*.6,-(1-ie)*6+fly*5.2);G.scale.setScalar(.6+.4*ie);
   Rr.render(S,C)})(performance.now());
 }
 setV(cur);
