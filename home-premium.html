@@ -195,6 +195,37 @@ body::after{content:'';position:fixed;inset:0;z-index:90;pointer-events:none;bac
 @media (max-width:1080px){.insg{grid-template-columns:1fr 1fr}}
 @media (max-width:720px){.insg{grid-template-columns:1fr}.work{padding-top:96px}.numsec,.q,.ins{padding-bottom:96px}}
 
+
+/* ===== v3.1 polish ===== */
+.clg img{max-height:34px;width:auto;height:auto}
+.live{display:inline-block;width:7px;height:7px;border-radius:50%;background:#2BC46D;margin-right:9px;vertical-align:1px;box-shadow:0 0 0 0 rgba(43,196,109,.5);animation:lv 2.4s infinite}
+@keyframes lv{70%{box-shadow:0 0 0 7px rgba(43,196,109,0)}100%{box-shadow:0 0 0 0 rgba(43,196,109,0)}}
+.hero h1 .serif.acc{background:linear-gradient(95deg,#6D2EC7,#B23FB8 60%,#E0598B);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.reel{transition:clip-path 1.6s var(--e),border-radius .6s}
+.clg{grid-template-columns:repeat(6,minmax(0,1fr))}
+.case .cimg{transition:transform 1.2s var(--e)}
+.case .ctx h3{transition:color .4s}.case:hover .ctx h3{color:var(--acc)}
+.stat b{background:linear-gradient(95deg,#6D2EC7,#B23FB8);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.srow h3{transition:transform .6s var(--e),color .3s}
+.q .qb{text-align:left;position:relative;overflow:hidden}
+.q .qb::before{content:'“';position:absolute;right:4%;top:2%;font-family:'Instrument Serif',serif;font-size:min(34vw,440px);line-height:1;color:rgba(109,46,199,.06);pointer-events:none}
+.qtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}
+.qtop img{height:30px;width:auto;filter:brightness(0);opacity:.55}
+.qdots{display:flex;gap:6px}.qdots i{width:6px;height:6px;border-radius:999px;background:var(--line);transition:width .5s var(--e),background .5s}.qdots i.on{width:26px;background:var(--acc)}
+.q .qw{justify-content:flex-start;gap:16px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+.qav{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#6D2EC7,#E0598B);color:#fff;display:grid;place-items:center;font-weight:600;font-size:15px;flex:none}
+.q .qw .qav{color:#fff}.qwho{display:flex;flex-direction:column;line-height:1.35}.qwho span{color:var(--mute);font-size:14.5px}
+.q .qn{margin-left:auto}
+.cmeta{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.avail{font-size:14px;color:#CFCAD6;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 14px}
+.cta h2 .serif{background:linear-gradient(95deg,#C9B3FF,#F2A6C6);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.btn.mag{height:64px;padding:0 32px;font-size:16.5px;transition:transform .5s var(--e),background .3s}
+.cta{position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;right:-10%;top:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(109,46,199,.35),transparent);pointer-events:none}
+.cta .w{position:relative}
+@media (max-width:1080px){.clg{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:720px){.clg{grid-template-columns:repeat(3,minmax(0,1fr))}.q .qn{margin-left:0}.q .qw{flex-wrap:wrap}.qtop img{height:24px}}
+
 /* responsive */
 @media (max-width:1080px){.nav{display:none}.mb{display:block}.hd .w{grid-template-columns:1fr auto}.hd-r .btn{display:none}
 .hmeta{grid-template-columns:1fr 1fr}.hmeta span:nth-child(2){display:none}
@@ -221,7 +252,7 @@ body::after{content:'';position:fixed;inset:0;z-index:90;pointer-events:none;bac
 <nav class="mn" id="mn" aria-label="Mobile"><a href="/work">Work</a><a href="#services">Services</a><a href="/about">Studio</a><a href="/blog">Insights</a><a href="/contact">Contact</a></nav>
 <main>
 <section class="hero"><div class="w">
-<div class="hmeta fu in"><span class="mono">GreyLeads — Digital growth studio</span><span class="mono">Bengaluru · London · Tokyo · Johannesburg</span><span class="mono">Booking Q1 2027</span></div>
+<div class="hmeta fu in"><span class="mono">GreyLeads — Digital growth studio</span><span class="mono">Bengaluru · London · Tokyo · Johannesburg</span><span class="mono"><i class="live"></i>Booking Q1 2027 · <span id="blr">--:--</span> IST</span></div>
 <h1 class="d" id="h1"><span class="ln"><span>Most brands blend</span></span><span class="ln ind"><span>into the grey.</span></span><span class="ln"><span>Yours will <span class="serif acc">lead.</span></span></span></h1>
 <div class="hrow fu" id="hrow"><p>We are a senior team of strategists, designers, developers and media buyers. We build the brands, websites, apps and campaigns that make people choose you.</p><div class="hcta"><a class="btn" href="/contact">Start a project</a><a class="btn lt" href="/work">See our work</a></div></div>
 <div class="reel rv-img" id="reel">
@@ -233,7 +264,7 @@ body::after{content:'';position:fixed;inset:0;z-index:90;pointer-events:none;bac
 <div class="rcap"><span class="mono">Selected work</span><b id="rcn">Greyweave</b><span id="rcd">Website &amp; SEO</span></div>
 <div class="rbars"><i class="on"><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
 </div>
-<div class="cl"><div class="clh"><span class="mono">Trusted by 24+ brands across</span><span class="clc">India · United Kingdom · Japan · South Africa</span></div><div class="clg"><span><img width="126" height="26" decoding="async" src="/assets/logo-2.webp" alt="Greyweave" style="height: 26px; width: auto; flex: none"></span><span><img width="89" height="37" decoding="async" src="/assets/logo-3.webp" alt="iAcharya" style="height: 37px; width: auto; flex: none"></span><span><img width="95" height="34" decoding="async" src="/assets/logo-4.webp" alt="Pix.city" style="height: 34px; width: auto; flex: none"></span><span><img width="146" height="22" decoding="async" src="/assets/logo-5.webp" alt="Honeycomb" style="height: 22px; width: auto; flex: none"></span><span><img width="151" height="26" decoding="async" src="/assets/logo-6.webp" alt="iVistaz Ecom Services" style="height: 26px; width: auto; flex: none"></span><span><img width="124" height="30" decoding="async" src="/assets/logo-7.webp" alt="Solize" style="height: 30px; width: auto; flex: none"></span><span><img width="144" height="29" decoding="async" src="/assets/logo-8.webp" alt="Empower HCM" style="height: 29px; width: auto; flex: none"></span><span><img width="129" height="32" decoding="async" src="/assets/logo-9.webp" alt="Quadrate Multilingual Consultant" style="height: 32px; width: auto; flex: none"></span><span><img width="52" height="51" decoding="async" src="/assets/logo-1.webp" alt="RecoSense" style="height: 51px; width: auto; flex: none"></span><span><img width="113" height="35" decoding="async" src="/assets/logo-10.webp" alt="Lavion Unisex Style &amp; Beauty Salon" style="height: 35px; width: auto; flex: none"></span><span><img width="81" height="43" decoding="async" src="/assets/logo-11.webp" alt="Jona's Cafe" style="height: 43px; width: auto; flex: none"></span><span><img width="57" height="56" decoding="async" src="/assets/logo-12.webp" alt="Sold-Out" style="height: 56px; width: auto; flex: none"></span></div></div>
+<div class="cl"><div class="clh"><span class="mono">Trusted by 24+ brands across</span><span class="clc">India · United Kingdom · Japan · South Africa</span></div><div class="clg"><span><img width="126" height="26" decoding="async" src="/assets/logo-2.webp" alt="Greyweave" style="height: 26px; width: auto; flex: none"></span><span><img width="89" height="37" decoding="async" src="/assets/logo-3.webp" alt="iAcharya" style="height: 37px; width: auto; flex: none"></span><span><img width="95" height="34" decoding="async" src="/assets/logo-4.webp" alt="Pix.city" style="height: 34px; width: auto; flex: none"></span><span><img width="146" height="22" decoding="async" src="/assets/logo-5.webp" alt="Honeycomb" style="height: 22px; width: auto; flex: none"></span><span><img width="151" height="26" decoding="async" src="/assets/logo-6.webp" alt="iVistaz Ecom Services" style="height: 26px; width: auto; flex: none"></span><span><img width="124" height="30" decoding="async" src="/assets/logo-7.webp" alt="Solize" style="height: 30px; width: auto; flex: none"></span><span><img width="144" height="29" decoding="async" src="/assets/logo-8.webp" alt="Empower HCM" style="height: 29px; width: auto; flex: none"></span><span><img width="129" height="32" decoding="async" src="/assets/logo-9.webp" alt="Quadrate Multilingual Consultant" style="height: 32px; width: auto; flex: none"></span><span><img decoding="async" src="/assets/logo-13.webp" alt="edmingle" style="height: 30px; width: auto"></span><span><img width="113" height="35" decoding="async" src="/assets/logo-10.webp" alt="Lavion Unisex Style &amp; Beauty Salon" style="height: 35px; width: auto; flex: none"></span><span><img width="81" height="43" decoding="async" src="/assets/logo-11.webp" alt="Jona's Cafe" style="height: 43px; width: auto; flex: none"></span><span><img width="57" height="56" decoding="async" src="/assets/logo-12.webp" alt="Sold-Out" style="height: 56px; width: auto; flex: none"></span><span><img src="/assets/logo-14.webp" alt="BlueTree"></span><span><img src="/assets/logo-16.webp" alt="Quinary Clinical Research"></span><span><img src="/assets/logo-17.webp" alt="formcept"></span><span><img src="/assets/logo-18.webp" alt="herkey"></span><span><img src="/assets/logo-20.webp" alt="TextMercato"></span><span><img src="/assets/logo-15.webp" alt="Verbly"></span></div></div>
 </div></section>
 
 <section class="work"><div class="w">
@@ -256,7 +287,7 @@ body::after{content:'';position:fixed;inset:0;z-index:90;pointer-events:none;bac
 </div></div></section>
 
 <section class="q"><div class="w"><div class="sec-h"><span class="mono">(03) In their words</span><span></span></div>
-<div class="qb"><blockquote id="qt"></blockquote><div class="qw"><div><b id="qa"></b> <span id="qr"></span></div><div class="qn"><button id="qp" aria-label="Previous">←</button><button id="qx" aria-label="Next">→</button></div></div></div>
+<div class="qb"><div class="qtop"><img id="ql" src="/assets/logo-20.webp" alt=""><span class="qdots" id="qd"><i></i><i></i><i></i></span></div><blockquote id="qt"></blockquote><div class="qw"><span class="qav" id="qi"></span><div class="qwho"><b id="qa"></b><span id="qr"></span></div><div class="qn"><button id="qp" aria-label="Previous">←</button><button id="qx" aria-label="Next">→</button></div></div></div>
 </div></section>
 
 <section class="glob"><div class="w">
@@ -284,9 +315,9 @@ body::after{content:'';position:fixed;inset:0;z-index:90;pointer-events:none;bac
 </main>
 
 <section class="cta"><div class="w">
-<span class="mono">(06) Start a project</span>
+<div class="cmeta"><span class="mono">(06) Start a project</span><span class="avail"><i class="live"></i>Now booking Q1 2027 projects</span></div>
 <h2 class="d" data-split>Let’s make you the one <span class="serif">they choose.</span></h2>
-<div class="crow"><p>Tell us where you want your brand in twelve months. A senior strategist replies within one business day.</p><div class="cact"><a class="mail" href="mailto:contact@greyleads.in">contact@greyleads.in</a><a class="btn" href="/contact">Start a project</a></div></div>
+<div class="crow"><p>Tell us where you want your brand in twelve months. A senior strategist replies within one business day.</p><div class="cact"><a class="mail" href="mailto:contact@greyleads.in">contact@greyleads.in</a><a class="btn mag" href="/contact">Start a project <span aria-hidden="true">↗</span></a></div></div>
 </div></section>
 <footer class="ft"><div class="w">
 <div class="fg"><div><a class="logo" href="/" style="color:#fff"><svg width="30" height="30" viewBox="0 0 536 536" aria-hidden="true"><path fill="#8C8C8C" d="M270 45A235 235 0 1 0 505 280L295 280L295 352L413 352A160 160 0 1 1 270 120Z"/><path fill="#6C2BC4" d="M295 45H357V196H505V258H295Z"/><rect x="370" y="118" width="66" height="66" rx="3" fill="#7A45CF"/><rect x="392" y="52" width="52" height="50" rx="3" fill="#9466DB"/><rect x="450" y="108" width="52" height="52" rx="3" fill="#8A5AD6"/><rect x="470" y="57" width="36" height="36" rx="3" fill="#A47DE0"/><rect x="452" y="26" width="22" height="22" rx="2" fill="#A47DE0"/><rect x="486" y="18" width="16" height="16" rx="2" fill="#B497E8"/></svg><span><span>Grey</span>Leads</span></a></div>
@@ -317,9 +348,14 @@ b.forEach(function(x,i){x.onclick=function(){go(i)}});go(0)})();
 (function(){var pv=document.getElementById('spv');if(!pv||!matchMedia('(hover: hover) and (pointer: fine)').matches)return;var im=pv.querySelector('img'),x=0,y=0,tx=0,ty=0,run=false;
 function l(){x+=(tx-x)*.16;y+=(ty-y)*.16;pv.style.left=x+'px';pv.style.top=y+'px';if(Math.abs(tx-x)>.4||Math.abs(ty-y)>.4)requestAnimationFrame(l);else run=false}
 document.querySelectorAll('.srow').forEach(function(a){a.addEventListener('mouseenter',function(e){im.src=a.dataset.img;if(!pv.classList.contains('on')){x=tx=e.clientX+190;y=ty=e.clientY}pv.classList.add('on')});a.addEventListener('mousemove',function(e){tx=e.clientX+190;ty=e.clientY;if(!run){run=true;requestAnimationFrame(l)}});a.addEventListener('mouseleave',function(){pv.classList.remove('on')})})})();
+
+// IST clock
+(function(){var e=document.getElementById('blr');if(!e)return;function t(){try{e.textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date())}catch(x){}}t();setInterval(t,30000)})();
+// magnetic CTA
+(function(){var b=document.querySelector('.btn.mag');if(!b||RM||!matchMedia('(hover: hover) and (pointer: fine)').matches)return;b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)'});b.addEventListener('mouseleave',function(){b.style.transform=''})})();
 // quotes
 var Q=[["We have been partnering with GreyLeads for finding potential clients. They have the ability to feed leads into our pipeline, take off this activity from us by making this a continuous process. This has helped us reach out to potential clients faster.", "Kiran Ramakrishna", "Founder, TextMercato"], ["The best thing about GreyLeads is, they are way more professional than they seem. The services provided by them have the potential of receiving planned results. We personally like the team and approach for their uninterrupted way of time and work done.", "Karthik Ramakrishnan", "Chairman, IAcharya Silicon Limited"], ["Best Digital Marketing Agency has transformed our online presence! With their strategic approach and expertise, their team is highly professional, responsive, and truly understands our brand\u2019s unique needs.", "Mani Kandan", "Founder, Lavion"]],qi=0,qt=document.getElementById('qt');
-function sq(i){qi=(i+Q.length)%Q.length;qt.classList.add('o');setTimeout(function(){qt.textContent='“'+Q[qi][0]+'”';document.getElementById('qa').textContent=Q[qi][1];document.getElementById('qr').textContent='— '+Q[qi][2];qt.classList.remove('o')},350)}
+var QL=['logo-20.webp','logo-3.webp','logo-10.webp'],QT;function sq(i){qi=(i+Q.length)%Q.length;qt.classList.add('o');clearTimeout(QT);setTimeout(function(){qt.textContent='“'+Q[qi][0]+'”';document.getElementById('qa').textContent=Q[qi][1];document.getElementById('qr').textContent=Q[qi][2];document.getElementById('qi').textContent=Q[qi][1].split(' ').map(function(w){return w[0]}).join('').slice(0,2);var l=document.getElementById('ql');l.src=l.getAttribute('src').replace(/logo-\d+\.webp/,QL[qi]);[].forEach.call(document.querySelectorAll('#qd i'),function(d,k){d.classList.toggle('on',k===qi)});qt.classList.remove('o')},350);if(!RM)QT=setTimeout(function(){sq(qi+1)},9000)}
 sq(0);document.getElementById('qp').onclick=function(){sq(qi-1)};document.getElementById('qx').onclick=function(){sq(qi+1)};
 })();
 </script>
